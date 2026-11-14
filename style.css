@@ -3,39 +3,46 @@ Theme Name: SANWAY - Phòng Cháy Chữa Cháy
 Theme URI: https://sanway.vn
 Author: Khánh Toàn
 Author URI: https://khanhtoan.info.vn
-Description: Giao diện website nghệ thuật cao cấp (High-End Industrial Haute-Engineering) cho CÔNG TY CỔ PHẦN SANWAY (SANWAY JSC).
-Version: 1.2.0
+Description: Giao diện website doanh nghiệp nghệ thuật cao cấp, tươi sáng, tích cực và tự tin (High-End Positive Architectural Architecture) cho CÔNG TY CỔ PHẦN SANWAY.
+Version: 1.3.0
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 Text Domain: sanway
-Tags: pccc, fire-safety, responsive, luxury, artistic, monumental, editorial
+Tags: pccc, fire-safety, responsive, luxury, artistic, positive, modern, clean
 */
 
 /* ==========================================================================
-   1. DESIGN TOKENS (HIGH-END ARTISTIC DARK ARCHITECTURE)
+   1. DESIGN TOKENS (LIGHT ARCHITECTURAL & POSITIVE ENERGY)
    ========================================================================== */
 :root {
-  --sw-bg: #06090F;
-  --sw-bg-alt: #090E17;
-  --sw-surface: #0E1422;
-  --sw-surface-hover: #131B2E;
+  --sw-bg: #FFFFFF;
+  --sw-bg-subtle: #F8FAFC;
+  --sw-bg-warm: #FAFAFA;
+  --sw-surface: #FFFFFF;
 
-  --sw-crimson: #D62828;
-  --sw-crimson-bright: #FF3B30;
-  --sw-crimson-glow: rgba(214, 40, 40, 0.35);
+  --sw-red: #D62828;
+  --sw-red-hover: #B91C1C;
+  --sw-red-light: #FEF2F2;
+  --sw-red-glow: rgba(214, 40, 40, 0.15);
 
-  --sw-text-pure: #FFFFFF;
-  --sw-text-titanium: #F1F5F9;
-  --sw-text-muted: #94A3B8;
-  --sw-text-dark: #64748B;
+  --sw-dark: #0F172A;
+  --sw-metal: #1E293B;
+  --sw-slate: #334155;
+  --sw-muted: #64748B;
+  --sw-light-muted: #94A3B8;
 
-  --sw-border-hairline: rgba(255, 255, 255, 0.08);
-  --sw-border-glow: rgba(214, 40, 40, 0.3);
+  --sw-border: #E2E8F0;
+  --sw-border-light: #F1F5F9;
 
   --sw-font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --sw-container: 1280px;
+
+  --sw-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --sw-shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --sw-shadow-lg: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --sw-shadow-glow: 0 10px 30px rgba(214, 40, 40, 0.25);
 }
 
 /* ==========================================================================
@@ -52,19 +59,19 @@ Tags: pccc, fire-safety, responsive, luxury, artistic, monumental, editorial
 html {
   font-family: var(--sw-font-main);
   background-color: var(--sw-bg);
-  color: var(--sw-text-titanium);
+  color: var(--sw-metal);
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
-body.sw-dark-artistic-theme {
+body.sw-positive-artistic-theme {
   background-color: var(--sw-bg);
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(214, 40, 40, 0.15) 0%, transparent 55%),
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 50% -10%, rgba(214, 40, 40, 0.06) 0%, transparent 60%),
+    linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
   background-size: 100% 100%, 80px 80px, 80px 80px;
-  color: var(--sw-text-titanium);
+  color: var(--sw-metal);
   font-family: var(--sw-font-main);
   overflow-x: hidden;
   line-height: 1.6;
@@ -73,7 +80,13 @@ body.sw-dark-artistic-theme {
 a {
   color: inherit;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.22s ease;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 img {
@@ -94,27 +107,26 @@ img {
 }
 
 /* ==========================================================================
-   3. ARTISTIC HEADER (HEROIC CENTER LOGO)
+   3. ARTISTIC HEADER (HEROIC CENTER LOGO, BRIGHT & PRESTIGIOUS)
    ========================================================================== */
-.sw-header-artistic {
+.sw-header-positive {
   position: sticky;
   top: 0;
   z-index: 100;
-  height: 96px;
-  background-color: rgba(6, 9, 15, 0.85);
+  height: 94px;
+  background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--sw-border-hairline);
+  border-bottom: 1px solid var(--sw-border);
   display: flex;
   align-items: center;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sw-header-artistic.is-scrolled {
-  height: 78px;
-  background-color: rgba(6, 9, 15, 0.95);
-  border-bottom-color: rgba(214, 40, 40, 0.25);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.sw-header-positive.is-scrolled {
+  height: 76px;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 25px rgba(15, 23, 42, 0.06);
 }
 
 .sw-header-center {
@@ -133,30 +145,30 @@ img {
 
 .sw-art-logo-link:hover {
   transform: scale(1.02);
-  opacity: 0.95;
+  opacity: 0.92;
 }
 
 /* TO VÀO: Logo lớn, chuẩn nhận diện cao cấp */
 .sw-art-logo-img {
-  height: 60px;
-  max-height: 60px;
+  height: 56px;
+  max-height: 56px;
   width: auto;
   object-fit: contain;
   transition: height 0.3s ease;
 }
 
-.sw-header-artistic.is-scrolled .sw-art-logo-img {
-  height: 48px;
-  max-height: 48px;
+.sw-header-positive.is-scrolled .sw-art-logo-img {
+  height: 44px;
+  max-height: 44px;
 }
 
 /* ==========================================================================
-   4. MONUMENTAL HERO SECTION (TO LỚN, NGHỆ THUẬT, CHOÁNG NGỢP)
+   4. MONUMENTAL HERO SECTION (TƯƠI SÁNG, NGHỆ THUẬT, TO LỚN & TỰ TIN)
    ========================================================================== */
-.sw-art-hero {
+.sw-pos-hero {
   position: relative;
-  min-height: calc(100vh - 96px);
-  padding: 80px 0 120px 0;
+  min-height: calc(100vh - 94px);
+  padding: 80px 0 110px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,15 +176,15 @@ img {
   overflow: hidden;
 }
 
-/* Watermark typography chìm ngầm khổng lồ */
-.sw-hero-ghost-watermark {
+/* Watermark typography chìm ngầm nhẹ nhàng */
+.sw-hero-ghost-light {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16vw;
+  font-size: 15vw;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.018);
+  color: rgba(15, 23, 42, 0.02);
   letter-spacing: 0.15em;
   white-space: nowrap;
   pointer-events: none;
@@ -180,83 +192,85 @@ img {
   user-select: none;
 }
 
-.sw-hero-content-center {
+.sw-pos-hero-content {
   max-width: 1080px;
   margin: 0 auto;
   position: relative;
   z-index: 3;
 }
 
-/* Technical Label */
-.sw-art-coordinate-label {
+/* Badge Tích Cực */
+.sw-pos-badge {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 8px 18px;
-  background-color: rgba(214, 40, 40, 0.08);
-  border: 1px solid rgba(214, 40, 40, 0.25);
+  gap: 10px;
+  padding: 8px 20px;
+  background-color: #FEF2F2;
+  border: 1px solid rgba(214, 40, 40, 0.2);
   border-radius: 9999px;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 800;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #F87171;
+  color: var(--sw-red);
+  margin-bottom: 28px;
+  box-shadow: 0 2px 8px rgba(214, 40, 40, 0.08);
+}
+
+.sw-pos-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--sw-red);
+  box-shadow: 0 0 10px rgba(214, 40, 40, 0.8);
+}
+
+/* MONUMENTAL HEADLINE (CHỮ KHỔNG LỒ, TƯƠI SÁNG, UY LỰC) */
+.sw-pos-hero-title {
+  font-size: clamp(3.6rem, 8.2vw, 7.2rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--sw-dark);
   margin-bottom: 28px;
 }
 
-.sw-art-dot-live {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--sw-crimson-bright);
-  box-shadow: 0 0 10px var(--sw-crimson-bright);
-}
-
-/* MONUMENTAL HEADLINE (CHỮ KHỔNG LỒ) */
-.sw-art-hero-headline {
-  font-size: clamp(3.8rem, 8.5vw, 7.5rem);
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  color: var(--sw-text-pure);
-  margin-bottom: 32px;
-}
-
-.sw-art-hero-headline span.sw-headline-break {
+.sw-pos-hero-title span.sw-line {
   display: block;
 }
 
-.sw-art-hero-headline span.sw-accent-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #D62828 50%, #FF4D4D 100%);
+.sw-pos-hero-title span.sw-text-red {
+  color: var(--sw-red);
+  background: linear-gradient(135deg, #E02424 0%, #B91C1C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Slogan & Editorial Subline */
-.sw-art-hero-slogan {
-  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+/* Slogan Thương Hiệu */
+.sw-pos-slogan {
+  font-size: clamp(1.25rem, 2.4vw, 1.9rem);
   font-weight: 800;
-  letter-spacing: 0.06em;
-  color: #F8FAFC;
+  letter-spacing: 0.05em;
+  color: var(--sw-dark);
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
-.sw-art-hero-slogan span {
-  color: var(--sw-crimson-bright);
+.sw-pos-slogan span {
+  color: var(--sw-red);
 }
 
-.sw-art-hero-desc {
-  font-size: 18px;
-  color: var(--sw-text-muted);
-  max-width: 720px;
-  margin: 0 auto 48px auto;
-  line-height: 1.6;
+.sw-pos-desc {
+  font-size: 18.5px;
+  color: var(--sw-slate);
+  max-width: 740px;
+  margin: 0 auto 44px auto;
+  line-height: 1.65;
 }
 
-/* Actions Buttons */
-.sw-art-hero-actions {
+/* Action Buttons (High-End & Energetic) */
+.sw-pos-actions {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -264,7 +278,7 @@ img {
   flex-wrap: wrap;
 }
 
-.sw-btn-art-primary {
+.sw-btn-pos-primary {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -274,356 +288,402 @@ img {
   color: #FFFFFF !important;
   font-weight: 800;
   font-size: 15px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 35px rgba(214, 40, 40, 0.4);
+  box-shadow: 0 10px 25px rgba(214, 40, 40, 0.35);
   transition: all 0.25s ease;
 }
 
-.sw-btn-art-primary:hover {
+.sw-btn-pos-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 50px rgba(214, 40, 40, 0.6);
+  box-shadow: 0 14px 32px rgba(214, 40, 40, 0.45);
 }
 
-.sw-btn-art-outline {
+.sw-btn-pos-secondary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 16px 32px;
   border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.04);
-  color: #FFFFFF !important;
+  background-color: #FFFFFF;
+  color: var(--sw-dark) !important;
   font-weight: 700;
   font-size: 15px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  border: 1px solid var(--sw-border-hairline);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--sw-border);
+  box-shadow: var(--sw-shadow-sm);
   transition: all 0.25s ease;
 }
 
-.sw-btn-art-outline:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.3);
+.sw-btn-pos-secondary:hover {
+  background-color: var(--sw-bg-subtle);
+  border-color: #CBD5E1;
   transform: translateY(-2px);
+  box-shadow: var(--sw-shadow-md);
 }
 
 /* ==========================================================================
-   5. MONUMENTAL NUMBERS (TRIỂN LÃM 3 CON SỐ KHỔNG LỒ)
+   5. MONUMENTAL NUMBERS (TRIỂN LÃM 3 CON SỐ - SÁNG SỦA, UY TÍN)
    ========================================================================== */
-.sw-monumental-numbers-section {
+.sw-pos-numbers-section {
   padding: 80px 0;
-  border-top: 1px solid var(--sw-border-hairline);
-  border-bottom: 1px solid var(--sw-border-hairline);
-  background-color: rgba(9, 14, 23, 0.6);
+  background-color: var(--sw-bg-subtle);
+  border-top: 1px solid var(--sw-border);
+  border-bottom: 1px solid var(--sw-border);
 }
 
-.sw-monumental-grid {
+.sw-pos-numbers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
 
-.sw-monumental-item {
+.sw-pos-num-item {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-left: 24px;
-  border-left: 2px solid rgba(214, 40, 40, 0.4);
+  padding-left: 28px;
+  border-left: 3px solid var(--sw-red);
 }
 
-.sw-monumental-val {
-  font-size: clamp(3.8rem, 6.5vw, 5.5rem);
+.sw-pos-num-val {
+  font-size: clamp(3.6rem, 6.2vw, 5.2rem);
   font-weight: 900;
-  line-height: 0.95;
+  line-height: 0.96;
   letter-spacing: -0.04em;
-  color: #FFFFFF;
+  color: var(--sw-dark);
 }
 
-.sw-monumental-val span {
-  color: var(--sw-crimson-bright);
+.sw-pos-num-val span {
+  color: var(--sw-red);
 }
 
-.sw-monumental-label {
+.sw-pos-num-title {
   font-size: 15px;
-  font-weight: 700;
-  color: #94A3B8;
+  font-weight: 800;
+  color: var(--sw-dark);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   margin-top: 14px;
 }
 
-.sw-monumental-sub {
-  font-size: 13.5px;
-  color: var(--sw-text-dark);
+.sw-pos-num-sub {
+  font-size: 14px;
+  color: var(--sw-muted);
   margin-top: 4px;
 }
 
 /* ==========================================================================
-   6. ARCHITECTURAL SHOWCASE (5 CỘT TRỤ GIẢI PHÁP NGHỆ THUẬT)
+   6. ARCHITECTURAL SHOWCASE (5 CỘT TRỤ GIẢI PHÁP - DẢI SÁNG SỦA)
    ========================================================================== */
-.sw-pillars-section {
+.sw-pos-pillars-section {
   padding: 120px 0;
+  background-color: #FFFFFF;
 }
 
-.sw-art-section-head {
+.sw-pos-section-head {
   margin-bottom: 64px;
+  text-align: left;
 }
 
-.sw-art-tag {
+.sw-pos-section-tag {
   font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--sw-crimson-bright);
+  color: var(--sw-red);
   display: block;
   margin-bottom: 12px;
 }
 
-.sw-art-section-title {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+.sw-pos-section-title {
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--sw-dark);
 }
 
-/* Horizontal Architectural Bands */
-.sw-pillar-list {
+.sw-pos-pillar-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--sw-border-hairline);
+  border-top: 2px solid var(--sw-dark);
 }
 
-.sw-pillar-row {
+.sw-pos-pillar-row {
   display: grid;
   grid-template-columns: 100px 1.4fr 1.6fr;
   align-items: center;
   padding: 38px 0;
-  border-bottom: 1px solid var(--sw-border-hairline);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--sw-border);
+  transition: all 0.25s ease;
   position: relative;
 }
 
-.sw-pillar-row::before {
-  content: '';
-  position: absolute;
-  left: -28px;
-  right: -28px;
-  top: 0;
-  bottom: 0;
-  background-color: transparent;
-  z-index: -1;
-  transition: background-color 0.25s ease;
+.sw-pos-pillar-row:hover {
+  background-color: var(--sw-bg-subtle);
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-.sw-pillar-row:hover::before {
-  background-color: rgba(255, 255, 255, 0.02);
-}
-
-.sw-pillar-row:hover .sw-pillar-index {
-  color: var(--sw-crimson-bright);
+.sw-pos-pillar-row:hover .sw-pos-pillar-idx {
+  color: var(--sw-red);
   transform: translateX(4px);
 }
 
-.sw-pillar-index {
-  font-size: 44px;
+.sw-pos-pillar-idx {
+  font-size: 42px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.25);
+  color: #CBD5E1;
   letter-spacing: -0.04em;
   transition: all 0.25s ease;
 }
 
-.sw-pillar-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+.sw-pos-pillar-title {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--sw-dark);
 }
 
-.sw-pillar-meta {
+.sw-pos-pillar-desc {
   font-size: 16px;
-  color: var(--sw-text-muted);
+  color: var(--sw-muted);
   line-height: 1.6;
 }
 
 /* ==========================================================================
-   7. MANIFESTO BANNER (TUYÊN NGÔN THƯƠNG HIỆU KHỔNG LỒ)
+   7. POSITIVE MANIFESTO (TUYÊN NGÔN TÍCH CỰC & TRÀN ĐẦY HY VỌNG)
    ========================================================================== */
-.sw-manifesto-section {
-  padding: 100px 0;
-  background: radial-gradient(circle at 50% 50%, rgba(214, 40, 40, 0.12) 0%, transparent 70%),
-              linear-gradient(180deg, var(--sw-bg) 0%, var(--sw-bg-alt) 100%);
-  border-top: 1px solid var(--sw-border-hairline);
-  border-bottom: 1px solid var(--sw-border-hairline);
-  text-align: center;
-}
-
-.sw-manifesto-quote {
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
+.sw-pos-manifesto-section {
+  padding: 110px 0;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
   color: #FFFFFF;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.sw-manifesto-quote span {
-  color: var(--sw-crimson-bright);
-}
-
-/* ==========================================================================
-   8. ARTISTIC CTA SECTION
-   ========================================================================== */
-.sw-art-cta-section {
-  padding: 120px 0;
   text-align: center;
-  position: relative;
-}
-
-.sw-art-cta-box {
-  background: linear-gradient(145deg, #111827 0%, #090E17 100%);
-  border: 1px solid rgba(214, 40, 40, 0.35);
-  border-radius: 32px;
-  padding: 80px 48px;
-  box-shadow: 0 0 60px rgba(214, 40, 40, 0.15);
   position: relative;
   overflow: hidden;
 }
 
-.sw-art-cta-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+.sw-pos-manifesto-quote {
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
-.sw-art-cta-hotline-giant {
-  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+.sw-pos-manifesto-quote span {
+  color: #F87171;
+}
+
+/* ==========================================================================
+   8. POSITIVE ARTISTIC CTA
+   ========================================================================== */
+.sw-pos-cta-section {
+  padding: 120px 0;
+  background-color: var(--sw-bg);
+  text-align: center;
+}
+
+.sw-pos-cta-box {
+  background: linear-gradient(135deg, #FEF2F2 0%, #FFFFFF 100%);
+  border: 1px solid rgba(214, 40, 40, 0.25);
+  border-radius: 32px;
+  padding: 80px 48px;
+  box-shadow: 0 20px 50px rgba(214, 40, 40, 0.08);
+}
+
+.sw-pos-cta-title {
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--sw-dark);
+  margin-bottom: 16px;
+}
+
+.sw-pos-cta-phone {
+  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--sw-crimson-bright);
+  color: var(--sw-red);
   display: inline-block;
-  margin: 24px 0 32px 0;
+  margin: 20px 0 28px 0;
   transition: transform 0.25s ease;
 }
 
-.sw-art-cta-hotline-giant:hover {
+.sw-pos-cta-phone:hover {
   transform: scale(1.03);
 }
 
 /* ==========================================================================
-   9. ABOUT PAGE (MONOGRAPH & SPECIFICATION SHEET)
+   9. ABOUT PAGE (BRAND MONOGRAPH & TECHNICAL SHEET)
    ========================================================================== */
-.sw-spec-card {
-  background: linear-gradient(145deg, #0D131F 0%, #080C14 100%);
-  border: 1px solid var(--sw-border-hairline);
+.sw-pos-spec-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
   border-radius: 24px;
   padding: 48px;
-  margin-top: 48px;
+  margin-top: 56px;
+  box-shadow: var(--sw-shadow-lg);
 }
 
-.sw-spec-table {
+.sw-pos-spec-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.sw-spec-table tr {
-  border-bottom: 1px solid var(--sw-border-hairline);
+.sw-pos-spec-table tr {
+  border-bottom: 1px solid var(--sw-border-light);
 }
 
-.sw-spec-table tr:last-child {
+.sw-pos-spec-table tr:last-child {
   border-bottom: none;
 }
 
-.sw-spec-table td {
+.sw-pos-spec-table td {
   padding: 20px 0;
   font-size: 16px;
 }
 
-.sw-spec-table td.sw-spec-key {
+.sw-pos-spec-table td.sw-key {
   width: 280px;
-  font-weight: 700;
-  color: var(--sw-text-muted);
+  font-weight: 800;
+  color: var(--sw-muted);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-size: 13.5px;
 }
 
-.sw-spec-table td.sw-spec-val {
+.sw-pos-spec-table td.sw-val {
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--sw-dark);
 }
 
 /* ==========================================================================
-   10. ARTISTIC FOOTER
+   10. CHUẨN MỰC CHÂN TRANG DOANH NGHIỆP (CLEAN & PRESTIGIOUS FOOTER)
    ========================================================================== */
-.sw-art-footer {
-  background-color: #04060A;
-  border-top: 1px solid var(--sw-border-hairline);
+.sw-pos-footer {
+  background-color: #0F172A;
+  color: #E2E8F0;
   padding: 80px 0 36px 0;
-  color: var(--sw-text-muted);
+  border-top: 3px solid var(--sw-red);
 }
 
-.sw-art-footer-grid {
+.sw-pos-footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
   gap: 64px;
   margin-bottom: 64px;
 }
 
-.sw-art-footer-bottom {
+.sw-pos-footer-col-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.sw-pos-footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--sw-red);
+}
+
+.sw-pos-footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sw-pos-footer-link {
+  font-size: 14.5px;
+  color: #94A3B8;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.sw-pos-footer-link:hover {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+.sw-pos-footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.sw-pos-footer-contact-item svg {
+  color: var(--sw-red);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sw-pos-footer-bottom {
   padding-top: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13.5px;
-  color: var(--sw-text-dark);
+  color: #94A3B8;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
-  .sw-pillar-row {
+  .sw-pos-pillar-row {
     grid-template-columns: 60px 1fr;
     gap: 12px;
   }
-  .sw-pillar-meta {
+  .sw-pos-pillar-desc {
     grid-column: 2;
   }
-  .sw-monumental-grid {
+  .sw-pos-numbers-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .sw-art-footer-grid {
+  .sw-pos-footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .sw-header-artistic {
-    height: 76px;
+  .sw-header-positive {
+    height: 74px;
   }
   .sw-art-logo-img {
     height: 44px;
   }
-  .sw-art-hero {
+  .sw-pos-hero {
     min-height: auto;
     padding: 60px 0 80px 0;
   }
-  .sw-art-cta-box {
+  .sw-pos-cta-box {
     padding: 48px 24px;
   }
-  .sw-spec-table td.sw-spec-key {
+  .sw-pos-spec-table td.sw-key {
     width: 140px;
     font-size: 12px;
   }

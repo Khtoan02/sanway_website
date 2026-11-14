@@ -126,15 +126,15 @@ function sanway_template_redirect() {
 add_action( 'template_redirect', 'sanway_template_redirect' );
 
 /**
- * Helper: Lấy URL Logo (Hỗ trợ bản white logo cho dark theme nghệ thuật)
+ * Helper: Lấy URL Logo
  */
-function sanway_get_logo_url( $type = 'white' ) {
+function sanway_get_logo_url( $type = 'horizontal' ) {
     if ( 'icon' === $type ) {
         $file_name = 'logo-icon.png';
-    } elseif ( 'dark' === $type || 'horizontal' === $type ) {
-        $file_name = 'logo-horizontal.png';
-    } else {
+    } elseif ( 'white' === $type ) {
         $file_name = 'logo-horizontal-white.png';
+    } else {
+        $file_name = 'logo-horizontal.png';
     }
     return get_template_directory_uri() . '/assets/images/' . $file_name;
 }
