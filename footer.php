@@ -27,15 +27,14 @@
                 </div>
             </div>
 
-            <!-- Col 2: Services -->
+            <!-- Col 2: Navigation & Services -->
             <div class="sw-footer-col">
-                <h4 class="sw-footer-col-title">Giải Pháp & Dịch Vụ</h4>
+                <h4 class="sw-footer-col-title">Doanh Nghiệp & Dịch Vụ</h4>
                 <ul class="sw-footer-links">
-                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Báo cháy tự động địa chỉ</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Chữa cháy Sprinkler & Drencher</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Trạm bơm điện & Diesel PCCC</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Bảo dưỡng, nạp sạc bình PCCC</a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Thẩm duyệt & Nghiệm thu PCCC</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-footer-link">Trang Chủ</a></li>
+                    <li><a href="<?php echo esc_url( function_exists( 'sanway_get_about_url' ) ? sanway_get_about_url() : home_url( '/gioi-thieu/' ) ); ?>" class="sw-footer-link">Hồ Sơ Năng Lực (Giới Thiệu)</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Báo Cháy & Chữa Cháy Tự Động</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-footer-link">Trạm Bơm & Nạp Sạc Bình PCCC</a></li>
                 </ul>
             </div>
 
@@ -126,26 +125,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Persistent Header shadow on scroll
     const header = document.getElementById('swHeader');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 20) {
-            header.classList.add('is-scrolled');
-        } else {
-            header.classList.remove('is-scrolled');
-        }
-    }, { passive: true });
-
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('swMenuToggle');
-    const drawer = document.getElementById('swMobileDrawer');
-    if (menuToggle && drawer) {
-        menuToggle.addEventListener('click', function() {
-            drawer.classList.toggle('is-open');
-        });
-        drawer.addEventListener('click', function(e) {
-            if (e.target === drawer || e.target.classList.contains('sw-nav-link')) {
-                drawer.classList.remove('is-open');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                header.classList.add('is-scrolled');
+            } else {
+                header.classList.remove('is-scrolled');
             }
-        });
+        }, { passive: true });
     }
 });
 </script>
