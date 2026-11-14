@@ -10,11 +10,11 @@
         <div class="sw-footer-grid">
             <!-- Col 1: About SANWAY -->
             <div class="sw-footer-col">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-logo-brand" style="margin-bottom: 16px;">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-logo-brand" style="margin-bottom: 20px;">
                     <?php 
-                    $logo_url = function_exists( 'sanway_get_logo_url' ) ? sanway_get_logo_url( 'horizontal' ) : '';
+                    $logo_url = function_exists( 'sanway_get_logo_url' ) ? sanway_get_logo_url( 'white' ) : '';
                     if ( $logo_url ) : ?>
-                        <img src="<?php echo esc_url( $logo_url ); ?>" alt="SANWAY PCCC" style="height: 44px; filter: brightness(0) invert(1);">
+                        <img src="<?php echo esc_url( $logo_url ); ?>" alt="SANWAY PCCC" style="height: 48px; width: auto;">
                     <?php else : ?>
                         <span class="sw-brand-name" style="color: #FFFFFF;">SANWAY JSC</span>
                     <?php endif; ?>

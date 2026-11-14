@@ -10,22 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-define( 'SANWAY_VERSION', '1.1.1' );
+define( 'SANWAY_VERSION', '1.2.0' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
 function sanway_theme_setup() {
-    // Add default posts and comments RSS feed links to head.
     add_theme_support( 'automatic-feed-links' );
-
-    // Let WordPress manage the document title.
     add_theme_support( 'title-tag' );
-
-    // Enable support for Post Thumbnails on posts and pages.
     add_theme_support( 'post-thumbnails' );
-
-    // Switch default core markup for search form, comment form, and comments to output valid HTML5.
     add_theme_support( 'html5', array(
         'search-form',
         'comment-form',
@@ -35,22 +28,12 @@ function sanway_theme_setup() {
         'style',
         'script'
     ) );
-
-    // Support Gutenberg responsive embeds
     add_theme_support( 'responsive-embeds' );
-
-    // Custom Logo Support
     add_theme_support( 'custom-logo', array(
-        'height'      => 80,
-        'width'       => 280,
+        'height'      => 90,
+        'width'       => 320,
         'flex-height' => true,
         'flex-width'  => true,
-    ) );
-
-    // Register Primary Navigation Menu
-    register_nav_menus( array(
-        'primary' => esc_html__( 'Thanh điều hướng chính (Primary Menu)', 'sanway' ),
-        'footer'  => esc_html__( 'Menu chân trang (Footer Menu)', 'sanway' ),
     ) );
 }
 add_action( 'after_setup_theme', 'sanway_theme_setup' );
@@ -59,10 +42,10 @@ add_action( 'after_setup_theme', 'sanway_theme_setup' );
  * Enqueue scripts and styles.
  */
 function sanway_enqueue_scripts() {
-    // Google Fonts
+    // Google Fonts (Plus Jakarta Sans)
     wp_enqueue_style(
         'sanway-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap',
+        'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&display=swap',
         array(),
         null
     );
@@ -97,7 +80,6 @@ add_filter( 'wp_resource_hints', 'sanway_resource_hints', 10, 2 );
 
 /**
  * Helper: Lấy URL trang Giới thiệu thông minh
- * Tự động tìm page có slug 'gioi-thieu' hoặc 'about', fallback sang '?view=about'
  */
 function sanway_get_about_url() {
     $about_page = get_page_by_path( 'gioi-thieu' );
@@ -144,16 +126,15 @@ function sanway_template_redirect() {
 add_action( 'template_redirect', 'sanway_template_redirect' );
 
 /**
- * Helper: Lấy URL Logo
+ * Helper: Lấy URL Logo (Hỗ trợ bản white logo cho dark theme nghệ thuật)
  */
-function sanway_get_logo_url( $type = 'horizontal' ) {
-    $file_name = ( 'icon' === $type ) ? 'logo-icon.png' : 'logo-horizontal.png';
-    $custom_logo_id = get_theme_mod( 'custom_logo' );
-    if ( $custom_logo_id && 'horizontal' === $type ) {
-        $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-        if ( ! empty( $logo[0] ) ) {
-            return $logo[0];
-        }
+function sanway_get_logo_url( $type = 'white' ) {
+    if ( 'icon' === $type ) {
+        $file_name = 'logo-icon.png';
+    } elseif ( 'dark' === $type || 'horizontal' === $type ) {
+        $file_name = 'logo-horizontal.png';
+    } else {
+        $file_name = 'logo-horizontal-white.png';
     }
     return get_template_directory_uri() . '/assets/images/' . $file_name;
 }

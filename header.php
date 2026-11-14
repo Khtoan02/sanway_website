@@ -1,7 +1,7 @@
 <?php
 /**
  * Header template for SANWAY Theme
- * Minimalist International Enterprise Header (Logo Only)
+ * Minimalist High-End International Header (Heroic Logo)
  *
  * @package SANWAY
  */
@@ -13,18 +13,18 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( 'sw-dark-artistic-theme' ); ?>>
 <?php wp_body_open(); ?>
 
-<!-- Ultra-Clean International Enterprise Header -->
-<header class="sw-header sw-header-minimal" id="swHeader">
+<!-- High-End International Artistic Header -->
+<header class="sw-header sw-header-artistic" id="swHeader">
     <div class="sw-container">
         <div class="sw-header-center">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-logo-brand" aria-label="SANWAY Homepage">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-art-logo-link" aria-label="SANWAY Homepage">
                 <?php 
-                $logo_url = function_exists( 'sanway_get_logo_url' ) ? sanway_get_logo_url( 'horizontal' ) : '';
-                if ( $logo_url ) : ?>
-                    <img src="<?php echo esc_url( $logo_url ); ?>" alt="SANWAY PCCC" class="sw-logo-img">
+                $logo_white = function_exists( 'sanway_get_logo_url' ) ? sanway_get_logo_url( 'white' ) : '';
+                if ( $logo_white ) : ?>
+                    <img src="<?php echo esc_url( $logo_white ); ?>" alt="SANWAY PCCC" class="sw-art-logo-img">
                 <?php else : ?>
                     <div class="sw-logo-text-wrapper">
                         <span class="sw-brand-name">SANWAY</span>
