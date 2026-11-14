@@ -1,0 +1,30 @@
+/*
+Theme Name: SANWAY - Phòng Cháy Chữa Cháy
+Theme URI: https://sanway.vn
+Author: Khánh Toàn
+Author URI: https://khanhtoan.info.vn
+Description: Giao diện website chuyên nghiệp cho SANWAY - Chuyên cung cấp thiết bị và giải pháp Phòng Cháy Chữa Cháy (PCCC).
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+Text Domain: sanway
+Tags: pccc, fire-safety, responsive, modern, tailwind
+*/
+
+:root {
+    --sanway-primary: #dc2626; /* PCCC Red */
+    --sanway-primary-hover: #b91c1c;
+    --sanway-dark: #0f172a;
+    --sanway-gray: #64748b;
+    --sanway-light: #f8fafc;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
