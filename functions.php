@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-define( 'SANWAY_VERSION', '1.2.0' );
+define( 'SANWAY_VERSION', '2.0.0' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -79,44 +79,44 @@ function sanway_resource_hints( $urls, $relation_type ) {
 add_filter( 'wp_resource_hints', 'sanway_resource_hints', 10, 2 );
 
 /**
- * Helper: Lấy URL trang Giới thiệu thông minh
+ * Helper: Lấy URL trang Liên Hệ thông minh
  */
-function sanway_get_about_url() {
-    $about_page = get_page_by_path( 'gioi-thieu' );
-    if ( ! $about_page ) {
-        $about_page = get_page_by_path( 'about' );
+function sanway_get_contact_url() {
+    $contact_page = get_page_by_path( 'lien-he' );
+    if ( ! $contact_page ) {
+        $contact_page = get_page_by_path( 'contact' );
     }
-    if ( $about_page ) {
-        return get_permalink( $about_page->ID );
+    if ( $contact_page ) {
+        return get_permalink( $contact_page->ID );
     }
-    return add_query_arg( 'view', 'about', home_url( '/' ) );
+    return add_query_arg( 'view', 'contact', home_url( '/' ) );
 }
 
 /**
- * Helper: Kiểm tra đang ở trang giới thiệu
+ * Helper: Kiểm tra đang ở trang Liên Hệ
  */
-function sanway_is_about_page() {
-    if ( isset( $_GET['view'] ) && 'about' === sanitize_key( $_GET['view'] ) ) {
+function sanway_is_contact_page() {
+    if ( isset( $_GET['view'] ) && 'contact' === sanitize_key( $_GET['view'] ) ) {
         return true;
     }
-    if ( is_page( array( 'gioi-thieu', 'about' ) ) ) {
+    if ( is_page( array( 'lien-he', 'contact' ) ) ) {
         return true;
     }
-    if ( is_page_template( 'page-about.php' ) ) {
+    if ( is_page_template( 'page-contact.php' ) ) {
         return true;
     }
     return false;
 }
 
 /**
- * Router fallback: Khi truy cập `?view=about`, load template page-about.php
+ * Router fallback: Khi truy cập `?view=contact`, load template page-contact.php
  */
 function sanway_template_redirect() {
     if ( is_admin() ) {
         return;
     }
-    if ( isset( $_GET['view'] ) && 'about' === sanitize_key( $_GET['view'] ) ) {
-        $template = locate_template( array( 'page-about.php' ) );
+    if ( isset( $_GET['view'] ) && 'contact' === sanitize_key( $_GET['view'] ) ) {
+        $template = locate_template( array( 'page-contact.php' ) );
         if ( $template ) {
             load_template( $template );
             exit;

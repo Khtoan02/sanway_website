@@ -650,41 +650,370 @@ img {
   gap: 16px;
 }
 
-/* Responsive */
+/* ==========================================================================
+   11. SECTION COMMONS, TRIAD & CONTACT PAGE STYLES
+   ========================================================================== */
+.sw-pos-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.sw-bg-subtle {
+  background-color: var(--sw-bg-subtle);
+  border-top: 1px solid var(--sw-border);
+  border-bottom: 1px solid var(--sw-border);
+}
+
+.sw-about-story-box {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 24px;
+  padding: 64px 48px;
+  text-align: center;
+  box-shadow: var(--sw-shadow-md);
+}
+
+.sw-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background-color: #FEF2F2;
+  color: var(--sw-red);
+  font-weight: 700;
+  font-size: 13.5px;
+  border: 1px solid rgba(214, 40, 40, 0.2);
+}
+
+/* 03 — Ba Lĩnh Vực Hoạt Động (Triad Grid) */
+.sw-triad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.sw-triad-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 20px;
+  padding: 40px 32px;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--sw-shadow-sm);
+}
+
+.sw-triad-card:hover {
+  transform: translateY(-4px);
+  border-color: #CBD5E1;
+  box-shadow: var(--sw-shadow-lg);
+}
+
+.sw-triad-number {
+  font-size: 44px;
+  font-weight: 900;
+  color: #E2E8F0;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.sw-triad-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--sw-dark);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.sw-triad-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--sw-muted);
+}
+
+/* 06 — Quy Trình 4 Bước */
+.sw-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sw-workflow-step {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.sw-workflow-step:hover {
+  transform: translateY(-3px);
+  border-color: rgba(214, 40, 40, 0.4);
+  box-shadow: var(--sw-shadow-md);
+}
+
+.sw-step-badge {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sw-red);
+  background: #FEF2F2;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.sw-step-heading {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--sw-dark);
+  margin-bottom: 10px;
+}
+
+.sw-step-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--sw-muted);
+}
+
+/* 07 — Cam Kết của SANWAY */
+.sw-commit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sw-commit-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 16px;
+  padding: 32px 24px;
+}
+
+.sw-commit-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FEF2F2;
+  color: var(--sw-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.sw-commit-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--sw-dark);
+  margin-bottom: 8px;
+}
+
+.sw-commit-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--sw-muted);
+}
+
+/* 02. LIÊN HỆ — QUICK CONNECT CARDS */
+.sw-quick-connect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.sw-connect-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--sw-shadow-sm);
+}
+
+.sw-connect-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sw-shadow-lg);
+  border-color: #CBD5E1;
+}
+
+.sw-connect-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background-color: #FEF2F2;
+  color: var(--sw-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sw-connect-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-muted);
+  margin-bottom: 6px;
+}
+
+.sw-connect-value {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--sw-red);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.sw-connect-sub {
+  font-size: 13.5px;
+  color: var(--sw-slate);
+}
+
+/* LIÊN HỆ — SPLIT GRID (THÔNG TIN & FORM) */
+.sw-contact-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.sw-company-info-panel {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 24px;
+  padding: 44px;
+  box-shadow: var(--sw-shadow-md);
+}
+
+.sw-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--sw-border-light);
+  font-size: 15px;
+}
+
+.sw-info-item:last-child {
+  border-bottom: none;
+}
+
+.sw-info-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.sw-info-item strong {
+  display: block;
+  font-size: 13.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sw-muted);
+  margin-bottom: 2px;
+}
+
+.sw-info-item p {
+  color: var(--sw-dark);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sw-contact-form-panel {
+  background-color: #FFFFFF;
+  border: 1px solid var(--sw-border);
+  border-radius: 24px;
+  padding: 44px;
+  box-shadow: var(--sw-shadow-lg);
+}
+
+.sw-quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sw-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.sw-form-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--sw-dark);
+}
+
+.sw-form-input,
+.sw-form-select,
+.sw-form-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--sw-border);
+  border-radius: 12px;
+  background-color: var(--sw-bg-subtle);
+  font-size: 15px;
+  color: var(--sw-dark);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.sw-form-input:focus,
+.sw-form-select:focus,
+.sw-form-textarea:focus {
+  background-color: #FFFFFF;
+  border-color: var(--sw-red);
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.12);
+}
+
+.sw-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* GOOGLE MAPS WRAPPER */
+.sw-maps-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--sw-border);
+  box-shadow: var(--sw-shadow-lg);
+}
+
+/* Extra Responsive rules */
 @media (max-width: 992px) {
-  .sw-pos-pillar-row {
-    grid-template-columns: 60px 1fr;
-    gap: 12px;
-  }
-  .sw-pos-pillar-desc {
-    grid-column: 2;
-  }
-  .sw-pos-numbers-grid {
+  .sw-triad-grid,
+  .sw-quick-connect-grid,
+  .sw-contact-split-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  .sw-pos-footer-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .sw-workflow-grid,
+  .sw-commit-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .sw-header-positive {
-    height: 74px;
+  .sw-workflow-grid,
+  .sw-commit-grid,
+  .sw-form-row {
+    grid-template-columns: 1fr;
   }
-  .sw-art-logo-img {
-    height: 44px;
-  }
-  .sw-pos-hero {
-    min-height: auto;
-    padding: 60px 0 80px 0;
-  }
-  .sw-pos-cta-box {
-    padding: 48px 24px;
-  }
-  .sw-pos-spec-table td.sw-key {
-    width: 140px;
-    font-size: 12px;
+  .sw-about-story-box,
+  .sw-company-info-panel,
+  .sw-contact-form-panel {
+    padding: 32px 20px;
   }
 }

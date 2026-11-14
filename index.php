@@ -5,8 +5,8 @@
  * @package SANWAY
  */
 
-if ( function_exists( 'sanway_is_about_page' ) && sanway_is_about_page() ) {
-    include get_template_directory() . '/page-about.php';
+if ( function_exists( 'sanway_is_contact_page' ) && sanway_is_contact_page() ) {
+    include get_template_directory() . '/page-contact.php';
     return;
 }
 

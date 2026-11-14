@@ -30,13 +30,13 @@
 
             <!-- Col 2: Navigation & Solutions -->
             <div class="sw-pos-footer-col">
-                <h4 class="sw-pos-footer-col-title">Doanh Nghiệp & Dịch Vụ</h4>
+                <h4 class="sw-pos-footer-col-title">Điều Hướng & Dịch Vụ</h4>
                 <div class="sw-pos-footer-list">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-pos-footer-link">Trang Chủ</a>
-                    <a href="<?php echo esc_url( function_exists( 'sanway_get_about_url' ) ? sanway_get_about_url() : home_url( '/gioi-thieu/' ) ); ?>" class="sw-pos-footer-link">Hồ Sơ Năng Lực (Giới Thiệu)</a>
-                    <a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-pos-footer-link">Báo Cháy & Chữa Cháy Tự Động</a>
-                    <a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-pos-footer-link">Trạm Bơm & Nạp Sạc Bình PCCC</a>
-                    <a href="<?php echo esc_url( home_url( '/#giai-phap' ) ); ?>" class="sw-pos-footer-link">Tư Vấn Thẩm Duyệt Nghiệm Thu</a>
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-pos-footer-link">01. Trang Chủ</a>
+                    <a href="<?php echo esc_url( function_exists( 'sanway_get_contact_url' ) ? sanway_get_contact_url() : home_url( '/lien-he/' ) ); ?>" class="sw-pos-footer-link">02. Liên Hệ & Báo Giá</a>
+                    <a href="<?php echo esc_url( home_url( '/#linh-vuc' ) ); ?>" class="sw-pos-footer-link">Ba Lĩnh Vực Hoạt Động</a>
+                    <a href="<?php echo esc_url( home_url( '/#dich-vu' ) ); ?>" class="sw-pos-footer-link">Dịch Vụ PCCC Trọng Tâm</a>
+                    <a href="<?php echo esc_url( home_url( '/#cam-ket' ) ); ?>" class="sw-pos-footer-link">Cam Kết Của SANWAY</a>
                 </div>
             </div>
 
