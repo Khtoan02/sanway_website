@@ -20,7 +20,7 @@
                     <?php endif; ?>
                 </a>
                 <p class="sw-footer-about">
-                    <strong>CÔNG TY CỔ PHẦN SANWAY</strong> chuyên cung cấp thiết bị, giải pháp kỹ thuật, thiết kế thi công và bảo trì trọn gói hệ thống Phòng Cháy Chữa Cháy (PCCC) tiêu chuẩn hàng đầu tại Hải Phòng và miền Bắc.
+                    <strong>SANWAY JSC</strong> — Thiết bị, giải pháp thi công và bảo trì hệ thống PCCC tiêu chuẩn cho doanh nghiệp và nhà xưởng công nghiệp.
                 </p>
                 <div style="font-size: 13.5px; color: #94A3B8; line-height: 1.6;">
                     <em>"Cho mỗi bước tiến thêm vững vàng"</em>
