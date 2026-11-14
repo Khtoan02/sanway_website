@@ -224,11 +224,11 @@ img {
    ========================================================================== */
 .sw-hero-219 {
   position: relative;
-  min-height: 100vh;
-  min-height: 880px;
+  min-height: 94vh;
+  min-height: 920px;
   display: flex;
   align-items: center;
-  padding: 56px 0 72px 0;
+  padding: 64px 0 88px 0;
   overflow: hidden;
   background-color: #FFFFFF;
 }
@@ -258,6 +258,7 @@ img {
     rgba(255, 255, 255, 0.25) 75%, 
     transparent 100%
   );
+  pointer-events: none;
 }
 
 .sw-hero-container {
@@ -271,7 +272,7 @@ img {
 
 /* Logo SANWAY Đặt Trực Tiếp Vào Section 1 (Kích Thước Lớn, Sang Trọng) */
 .sw-hero-logo-row {
-  margin-bottom: 52px;
+  margin-bottom: 56px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -289,33 +290,45 @@ img {
 }
 
 .sw-hero-logo-img {
-  height: 72px;
-  max-height: 72px;
+  height: 84px;
+  max-height: 84px;
   width: auto;
   object-fit: contain;
 }
 
+@media (min-width: 1400px) {
+  .sw-hero-logo-img {
+    height: 92px;
+    max-height: 92px;
+  }
+}
+
 .sw-hero-left-col {
-  max-width: 640px;
+  max-width: 660px;
   position: relative;
   z-index: 3;
 }
 
 /* Slogan Tiếng Việt Chuẩn Ngữ Nghĩa - Tuyệt Đối Tránh Xuống Dòng Vô Thức */
 .sw-hero-slogan-title {
-  font-size: clamp(2.6rem, 4.8vw, 4.4rem);
+  font-size: clamp(2.6rem, 4.8vw, 4.5rem);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.12;
   letter-spacing: -0.035em;
   text-transform: uppercase;
   color: var(--sw-dark);
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+  word-break: keep-all;
+}
+
+.sw-nowrap {
+  white-space: nowrap;
   word-break: keep-all;
 }
 
 .sw-title-line {
   display: block;
-  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .sw-text-red {
@@ -1092,14 +1105,15 @@ img {
     padding: 48px 0 60px;
   }
   .sw-hero-logo-img {
-    height: 52px;
-    max-height: 52px;
+    height: 60px;
+    max-height: 60px;
   }
   .sw-hero-logo-row {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .sw-title-line {
     white-space: normal;
+    word-break: keep-all;
   }
   .sw-hero-gradient-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.93) 65%, rgba(255, 255, 255, 0.75) 100%);

@@ -65,14 +65,8 @@ add_action( 'wp_enqueue_scripts', 'sanway_enqueue_scripts' );
  */
 function sanway_resource_hints( $urls, $relation_type ) {
     if ( 'preconnect' === $relation_type ) {
-        $urls[] = array(
-            'href' => 'https://fonts.googleapis.com',
-            'crossorigin' => 'anonymous',
-        );
-        $urls[] = array(
-            'href' => 'https://fonts.gstatic.com',
-            'crossorigin' => 'anonymous',
-        );
+        $urls[] = 'https://fonts.googleapis.com';
+        $urls[] = 'https://fonts.gstatic.com';
     }
     return $urls;
 }
@@ -82,12 +76,22 @@ add_filter( 'wp_resource_hints', 'sanway_resource_hints', 10, 2 );
  * Helper: Lấy URL trang Liên Hệ thông minh
  */
 function sanway_get_contact_url() {
-    $contact_page = get_page_by_path( 'lien-he' );
-    if ( ! $contact_page ) {
-        $contact_page = get_page_by_path( 'contact' );
+    $pages = get_posts( array(
+        'name'        => 'lien-he',
+        'post_type'   => 'page',
+        'post_status' => 'publish',
+        'numberposts' => 1,
+    ) );
+    if ( empty( $pages ) ) {
+        $pages = get_posts( array(
+            'name'        => 'contact',
+            'post_type'   => 'page',
+            'post_status' => 'publish',
+            'numberposts' => 1,
+        ) );
     }
-    if ( $contact_page ) {
-        return get_permalink( $contact_page->ID );
+    if ( ! empty( $pages ) ) {
+        return get_permalink( $pages[0]->ID );
     }
     return add_query_arg( 'view', 'contact', home_url( '/' ) );
 }

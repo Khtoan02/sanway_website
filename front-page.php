@@ -53,8 +53,8 @@ get_header();
                 </div>
 
                 <h1 class="sw-hero-slogan-title">
-                    <span class="sw-title-line">CHO MỖI BƯỚC TIẾN</span>
-                    <span class="sw-title-line sw-text-red">THÊM VỮNG VÀNG</span>
+                    <span class="sw-title-line"><span class="sw-nowrap">CHO MỖI</span> <span class="sw-nowrap">BƯỚC TIẾN</span></span>
+                    <span class="sw-title-line sw-text-red"><span class="sw-nowrap">THÊM VỮNG VÀNG</span></span>
                 </h1>
 
                 <p class="sw-hero-subline">
@@ -371,7 +371,7 @@ get_header();
             <div class="sw-panoramic-content">
                 <span class="sw-tag-white">07 / KẾT NỐI HỢP TÁC</span>
                 <div class="sw-panoramic-slogan">
-                    "CHO MỖI BƯỚC TIẾN <span>THÊM VỮNG VÀNG</span>"
+                    "<span class="sw-nowrap">CHO MỖI</span> <span class="sw-nowrap">BƯỚC TIẾN</span> <span class="sw-nowrap">THÊM VỮNG VÀNG</span>"
                 </div>
                 <h2 class="sw-panoramic-heading">
                     SẴN SÀNG ĐỒNG HÀNH BẢO VỆ DOANH NGHIỆP BẠN

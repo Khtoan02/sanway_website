@@ -1,7 +1,7 @@
 <?php
 /**
  * Header template for SANWAY Theme
- * Head metadata and body open (Header navbar removed - Logo integrated directly into Section 1)
+ * Header navigation removed per user request: Logo is integrated directly into Section 1 with prominent scale.
  *
  * @package SANWAY
  */
@@ -15,4 +15,3 @@
 </head>
 <body <?php body_class( 'sw-positive-artistic-theme' ); ?>>
 <?php wp_body_open(); ?>
-
