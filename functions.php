@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-define( 'SANWAY_VERSION', '1.1.0' );
+define( 'SANWAY_VERSION', '1.1.1' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -59,7 +59,7 @@ add_action( 'after_setup_theme', 'sanway_theme_setup' );
  * Enqueue scripts and styles.
  */
 function sanway_enqueue_scripts() {
-    // Preconnect to Google Fonts
+    // Google Fonts
     wp_enqueue_style(
         'sanway-google-fonts',
         'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap',
@@ -81,7 +81,7 @@ add_action( 'wp_enqueue_scripts', 'sanway_enqueue_scripts' );
  * Add resource preconnect for fonts
  */
 function sanway_resource_hints( $urls, $relation_type ) {
-    if ( wp_dependencies_unique_slug( 'preconnect' ) === $relation_type ) {
+    if ( 'preconnect' === $relation_type ) {
         $urls[] = array(
             'href' => 'https://fonts.googleapis.com',
             'crossorigin' => 'anonymous',
@@ -130,6 +130,9 @@ function sanway_is_about_page() {
  * Router fallback: Khi truy cập `?view=about`, load template page-about.php
  */
 function sanway_template_redirect() {
+    if ( is_admin() ) {
+        return;
+    }
     if ( isset( $_GET['view'] ) && 'about' === sanitize_key( $_GET['view'] ) ) {
         $template = locate_template( array( 'page-about.php' ) );
         if ( $template ) {
