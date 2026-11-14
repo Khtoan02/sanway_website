@@ -47,11 +47,6 @@ get_header();
 
             <!-- Left Content Column (Ngữ nghĩa tiếng Việt chuẩn chỉ, không ngắt dòng vô thức) -->
             <div class="sw-hero-left-col">
-                <div class="sw-pos-badge">
-                    <span class="sw-pos-dot"></span>
-                    SANWAY JSC • AN TOÀN DOANH NGHIỆP
-                </div>
-
                 <h1 class="sw-hero-slogan-title">
                     <span class="sw-title-line"><span class="sw-nowrap">CHO MỖI</span> <span class="sw-nowrap">BƯỚC TIẾN</span></span>
                     <span class="sw-title-line sw-text-red"><span class="sw-nowrap">THÊM VỮNG VÀNG</span></span>
@@ -96,8 +91,7 @@ get_header();
                     </div>
                     <div class="sw-image-content">
                         <span class="sw-card-num">01</span>
-                        <h3 class="sw-card-title">THIẾT BỊ & VẬT TƯ PCCC CHUẨN KIỂM ĐỊNH</h3>
-                        <p class="sw-card-desc">Cung cấp hơn 47+ chủng loại trang thiết bị đạt chuẩn kiểm định Cảnh sát PCCC và CO/CQ minh bạch.</p>
+                        <h3 class="sw-card-title">THIẾT BỊ & VẬT TƯ PCCC</h3>
                     </div>
                 </div>
 
@@ -109,8 +103,7 @@ get_header();
                     </div>
                     <div class="sw-image-content">
                         <span class="sw-card-num">02</span>
-                        <h3 class="sw-card-title">THI CÔNG & LẮP ĐẶT HỆ THỐNG TOÀN DIỆN</h3>
-                        <p class="sw-card-desc">Thi công mạng lưới báo cháy tự động, hệ thống Sprinkler và cụm trạm bơm công nghiệp công suất lớn.</p>
+                        <h3 class="sw-card-title">THI CÔNG & LẮP ĐẶT HỆ THỐNG</h3>
                     </div>
                 </div>
 
@@ -122,8 +115,7 @@ get_header();
                     </div>
                     <div class="sw-image-content">
                         <span class="sw-card-num">03</span>
-                        <h3 class="sw-card-title">BẢO TRÌ NHÀ MÁY & THẨM DUYỆT PHÁP LÝ</h3>
-                        <p class="sw-card-desc">Hợp đồng bảo dưỡng định kỳ tại các KCN, nạp sạc bình PCCC tận nơi và hoàn thiện hồ sơ nghiệm thu.</p>
+                        <h3 class="sw-card-title">BẢO TRÌ & THẨM DUYỆT PHÁP LÝ</h3>
                     </div>
                 </div>
             </div>
@@ -147,7 +139,6 @@ get_header();
                         <div class="sw-sol-num">01</div>
                         <div>
                             <h3 class="sw-sol-name">HỆ THỐNG BÁO CHÁY TỰ ĐỘNG</h3>
-                            <p class="sw-sol-text">Tủ trung tâm địa chỉ thông minh, cảm biến quang điện, nhiệt gia tăng & laser BEAM độ nhạy cao.</p>
                         </div>
                     </div>
 
@@ -155,7 +146,6 @@ get_header();
                         <div class="sw-sol-num">02</div>
                         <div>
                             <h3 class="sw-sol-name">HỆ THỐNG CHỮA CHÁY SPRINKLER</h3>
-                            <p class="sw-sol-text">Mạng lưới đầu phun tự động phản ứng nhanh, cụm van tràn xả áp lực cao bảo vệ an toàn nhà xưởng.</p>
                         </div>
                     </div>
 
@@ -163,15 +153,13 @@ get_header();
                         <div class="sw-sol-num">03</div>
                         <div>
                             <h3 class="sw-sol-name">TRẠM BƠM CÔNG SUẤT CAO</h3>
-                            <p class="sw-sol-text">Động cơ điện & Diesel công suất lớn, tủ điều khiển tự động hóa PLC duy trì liên tục áp lực nước.</p>
                         </div>
                     </div>
 
                     <div class="sw-solution-item">
                         <div class="sw-sol-num">04</div>
                         <div>
-                            <h3 class="sw-sol-name">KIỂM ĐỊNH & NẠP SẠC BÌNH PCCC</h3>
-                            <p class="sw-sol-text">Kiểm tra áp lực định kỳ, nạp sạc khí CO2 (MT3) và bình bột ABC (MFZL4, MFZ35) đạt chuẩn kiểm định.</p>
+                            <h3 class="sw-sol-name">BẢO TRÌ & NẠP SẠC BÌNH PCCC</h3>
                         </div>
                     </div>
                 </div>
@@ -184,7 +172,6 @@ get_header();
                     </div>
                     <div class="sw-model-caption">
                         <strong>Tổ Hợp Kết Cấu & Mạng Lưới Kỹ Thuật PCCC</strong>
-                        <span>Mặt cắt trực quan hệ thống đường ống dẫn, đầu phun Sprinkler và trạm bơm liên động.</span>
                     </div>
                 </div>
             </div>
@@ -208,13 +195,12 @@ get_header();
                     <div class="sw-cross-tag">TỔ HỢP CÔNG TRÌNH VĂN PHÒNG & NHÀ XƯỞNG</div>
                 </div>
 
-                <!-- 3 Giá trị cốt lõi bên phải -->
+                <!-- 3 Giá trị cốt lõi bên phải (Chỉ giữ nội dung cốt lõi, không rườm rà) -->
                 <div class="sw-values-stack">
                     <div class="sw-val-item">
                         <div class="sw-val-idx">01</div>
                         <div>
                             <h3 class="sw-val-title">AN TOÀN TUYỆT ĐỐI</h3>
-                            <p class="sw-val-desc">Đặt tính mạng con người và giá trị tài sản doanh nghiệp làm trọng tâm tối thượng trong từng chi tiết kỹ thuật.</p>
                         </div>
                     </div>
 
@@ -222,7 +208,6 @@ get_header();
                         <div class="sw-val-idx">02</div>
                         <div>
                             <h3 class="sw-val-title">CHUẨN MỰC PHÁP LÝ</h3>
-                            <p class="sw-val-desc">100% tuân thủ quy chuẩn kỹ thuật QCVN 06:2022/BXD và thủ tục thẩm duyệt nghiệm thu của cơ quan Cảnh sát PCCC.</p>
                         </div>
                     </div>
 
@@ -230,7 +215,6 @@ get_header();
                         <div class="sw-val-idx">03</div>
                         <div>
                             <h3 class="sw-val-title">ĐỒNG HÀNH BỀN VỮNG</h3>
-                            <p class="sw-val-desc">Chính sách bảo hành 12 - 24 tháng, bảo dưỡng định kỳ và túc trực kỹ thuật khẩn cấp 24/7 trọn vòng đời sử dụng.</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +232,7 @@ get_header();
                 <h2 class="sw-title-monumental">QUY TRÌNH 5 BƯỚC TIÊU CHUẨN</h2>
             </div>
 
-            <!-- Đồ họa Timeline Liên tục (Continuous Timeline Graphics) -->
+            <!-- Đồ họa Timeline Liên tục (5 Bước tinh gọn, cốt lõi) -->
             <div class="sw-timeline-container">
                 <div class="sw-timeline-line"></div>
                 <div class="sw-timeline-steps">
@@ -256,35 +240,30 @@ get_header();
                     <div class="sw-tstep">
                         <div class="sw-tstep-node">01</div>
                         <h4 class="sw-tstep-name">KHẢO SÁT</h4>
-                        <p class="sw-tstep-text">Đo đạc hiện trường & đánh giá hiện trạng thực tế công trình.</p>
                     </div>
 
                     <!-- Step 2 -->
                     <div class="sw-tstep">
                         <div class="sw-tstep-node">02</div>
                         <h4 class="sw-tstep-name">THIẾT KẾ</h4>
-                        <p class="sw-tstep-text">Lập bản vẽ giải pháp kỹ thuật & bóc tách dự toán minh bạch.</p>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="sw-tstep">
                         <div class="sw-tstep-node">03</div>
                         <h4 class="sw-tstep-name">THẨM DUYỆT</h4>
-                        <p class="sw-tstep-text">Hoàn thiện hồ sơ thẩm duyệt chuẩn pháp lý với cơ quan PCCC.</p>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="sw-tstep">
                         <div class="sw-tstep-node">04</div>
                         <h4 class="sw-tstep-name">THI CÔNG</h4>
-                        <p class="sw-tstep-text">Lắp đặt thiết bị chính hãng và chạy thử nghiệm liên động.</p>
                     </div>
 
                     <!-- Step 5 -->
                     <div class="sw-tstep">
                         <div class="sw-tstep-node">05</div>
                         <h4 class="sw-tstep-name">BÀN GIAO</h4>
-                        <p class="sw-tstep-text">Nghiệm thu Cảnh sát PCCC & kích hoạt bảo hành bảo trì.</p>
                     </div>
                 </div>
             </div>
@@ -299,9 +278,6 @@ get_header();
             <div class="sw-section-header-clean">
                 <span class="sw-tag-red">06 / ĐỒNG HÀNH & HỢP TÁC</span>
                 <h2 class="sw-title-monumental">6 LOẠI HÌNH CÔNG TRÌNH TIÊU BIỂU</h2>
-                <p style="font-size: 16px; color: var(--sw-muted); margin-top: 8px;">
-                    SANWAY tự hào phục vụ đa dạng các quy mô công trình công nghiệp và dân dụng tại Hải Phòng và miền Bắc.
-                </p>
             </div>
 
             <!-- Lưới Ảnh Kiến Trúc (6 Architectural Grid Items) -->
@@ -374,11 +350,8 @@ get_header();
                     "<span class="sw-nowrap">CHO MỖI</span> <span class="sw-nowrap">BƯỚC TIẾN</span> <span class="sw-nowrap">THÊM VỮNG VÀNG</span>"
                 </div>
                 <h2 class="sw-panoramic-heading">
-                    SẴN SÀNG ĐỒNG HÀNH BẢO VỆ DOANH NGHIỆP BẠN
+                    KẾT NỐI CÙNG SANWAY
                 </h2>
-                <p class="sw-panoramic-sub">
-                    Kết nối trực tiếp cùng Giám Đốc SANWAY JSC để nhận phương án kỹ thuật và bảng báo giá chi tiết trong vòng 24 giờ.
-                </p>
 
                 <div class="sw-panoramic-actions">
                     <a href="tel:0936543389" class="sw-btn-pos-primary" style="padding: 18px 40px; font-size: 16px;">

@@ -447,11 +447,12 @@ img {
 
 .sw-solution-item {
   display: flex;
+  align-items: center;
   gap: 20px;
   background-color: #FFFFFF;
   border: 1px solid var(--sw-border);
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px 24px;
   box-shadow: var(--sw-shadow-sm);
   transition: all 0.25s ease;
 }
@@ -474,13 +475,7 @@ img {
   font-weight: 800;
   color: var(--sw-dark);
   text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.sw-sol-text {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--sw-muted);
+  margin-bottom: 0;
 }
 
 .sw-tech-3d-model-card {
@@ -586,11 +581,12 @@ img {
 
 .sw-val-item {
   display: flex;
+  align-items: center;
   gap: 20px;
   background-color: #FFFFFF;
   border: 1px solid var(--sw-border);
   border-radius: 18px;
-  padding: 24px;
+  padding: 20px 24px;
   box-shadow: var(--sw-shadow-sm);
   transition: all 0.25s ease;
 }
@@ -614,13 +610,7 @@ img {
   font-weight: 800;
   color: var(--sw-dark);
   text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.sw-val-desc {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: var(--sw-muted);
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -681,17 +671,11 @@ img {
 }
 
 .sw-tstep-name {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   color: var(--sw-dark);
-  margin-bottom: 8px;
+  margin-bottom: 0;
   text-transform: uppercase;
-}
-
-.sw-tstep-text {
-  font-size: 13.5px;
-  color: var(--sw-muted);
-  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -1002,9 +986,10 @@ img {
 
 .sw-pos-footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.2fr;
-  gap: 64px;
-  margin-bottom: 64px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+  margin-bottom: 56px;
 }
 
 .sw-pos-footer-col-title {

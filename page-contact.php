@@ -18,9 +18,7 @@ get_header();
     <!-- =====================================================================
          1. HERO BANNER
          ===================================================================== -->
-    <section class="sw-pos-hero" style="min-height: 50vh; padding: 50px 0 70px 0;">
-        <div class="sw-hero-ghost-light">CONTACT</div>
-
+    <section class="sw-pos-hero" style="min-height: 44vh; padding: 50px 0 60px 0;">
         <div class="sw-container">
             <!-- Brand Logo (Điều hướng về Trang Chủ) -->
             <div class="sw-hero-logo-row" style="margin-bottom: 44px;">
@@ -30,11 +28,6 @@ get_header();
             </div>
 
             <div class="sw-pos-hero-content">
-                <div class="sw-pos-badge">
-                    <span class="sw-pos-dot"></span>
-                    KẾT NỐI TRỰC TIẾP • SANWAY JSC
-                </div>
-
                 <h1 class="sw-pos-hero-title" style="font-size: clamp(3rem, 6.5vw, 5.8rem);">
                     <span class="sw-line">LIÊN HỆ &</span>
                     <span class="sw-line sw-text-red">BÁO GIÁ KỸ THUẬT</span>
