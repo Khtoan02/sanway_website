@@ -213,61 +213,22 @@ img {
 }
 
 /* ==========================================================================
-   3. ARTISTIC HEADER (CENTER LOGO)
+   3. ARTISTIC HEADER (REMOVED - INTEGRATED DIRECTLY INTO HERO SECTION 1)
    ========================================================================== */
 .sw-header-positive {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  height: 94px;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--sw-border);
-  display: flex;
-  align-items: center;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.sw-header-positive.is-scrolled {
-  height: 76px;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
-}
-
-.sw-header-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.sw-art-logo-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sw-art-logo-img {
-  height: 56px;
-  max-height: 56px;
-  width: auto;
-  object-fit: contain;
-  transition: height 0.3s ease;
-}
-
-.sw-header-positive.is-scrolled .sw-art-logo-img {
-  height: 44px;
-  max-height: 44px;
+  display: none !important;
 }
 
 /* ==========================================================================
-   01. HERO (21:9 WIDE RATIO ARCHITECTURAL 3D)
+   01. HERO (HIGH-END ARCHITECTURAL HERO - EXPANDED HEIGHT & EMBEDDED LOGO)
    ========================================================================== */
 .sw-hero-219 {
   position: relative;
-  min-height: 640px;
+  min-height: 100vh;
+  min-height: 880px;
   display: flex;
   align-items: center;
+  padding: 56px 0 72px 0;
   overflow: hidden;
   background-color: #FFFFFF;
 }
@@ -282,31 +243,79 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
+  object-position: 72% center;
 }
 
-/* Gradient overlay giúp 40% bên trái nền trắng sáng tinh khiết */
+/* Precision Gradient Overlay: 45% bên trái trắng sáng tuyệt đối, khoe trọn kiến trúc bên phải */
 .sw-hero-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.98) 38%, rgba(255, 255, 255, 0.72) 52%, rgba(255, 255, 255, 0.15) 75%, transparent 100%);
+  background: linear-gradient(
+    90deg, 
+    #FFFFFF 0%, 
+    rgba(255, 255, 255, 0.98) 42%, 
+    rgba(255, 255, 255, 0.82) 54%, 
+    rgba(255, 255, 255, 0.25) 75%, 
+    transparent 100%
+  );
+}
+
+.sw-hero-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Logo SANWAY Đặt Trực Tiếp Vào Section 1 (Kích Thước Lớn, Sang Trọng) */
+.sw-hero-logo-row {
+  margin-bottom: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sw-hero-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.sw-hero-logo-link:hover {
+  transform: scale(1.02);
+}
+
+.sw-hero-logo-img {
+  height: 72px;
+  max-height: 72px;
+  width: auto;
+  object-fit: contain;
 }
 
 .sw-hero-left-col {
-  max-width: 580px;
+  max-width: 640px;
   position: relative;
   z-index: 3;
-  padding: 40px 0;
 }
 
+/* Slogan Tiếng Việt Chuẩn Ngữ Nghĩa - Tuyệt Đối Tránh Xuống Dòng Vô Thức */
 .sw-hero-slogan-title {
-  font-size: clamp(2.5rem, 4.4vw, 4.2rem);
+  font-size: clamp(2.6rem, 4.8vw, 4.4rem);
   font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
   color: var(--sw-dark);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  word-break: keep-all;
+}
+
+.sw-title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .sw-text-red {
@@ -314,10 +323,12 @@ img {
 }
 
 .sw-hero-subline {
-  font-size: 17.5px;
-  line-height: 1.65;
+  font-size: clamp(16px, 1.25vw, 18.5px);
+  line-height: 1.68;
   color: var(--sw-slate);
-  margin-bottom: 34px;
+  margin-bottom: 36px;
+  max-width: 560px;
+  text-wrap: pretty;
 }
 
 .sw-hero-btn-row {
@@ -1055,7 +1066,8 @@ img {
    ========================================================================== */
 @media (max-width: 1024px) {
   .sw-hero-219 {
-    min-height: 540px;
+    min-height: 720px;
+    padding: 60px 0;
   }
   .sw-three-image-grid,
   .sw-solutions-composite-grid,
@@ -1075,18 +1087,22 @@ img {
 }
 
 @media (max-width: 768px) {
-  .sw-header-positive {
-    height: 74px;
-  }
-  .sw-art-logo-img {
-    height: 44px;
-  }
   .sw-hero-219 {
     min-height: auto;
-    padding: 60px 0;
+    padding: 48px 0 60px;
+  }
+  .sw-hero-logo-img {
+    height: 52px;
+    max-height: 52px;
+  }
+  .sw-hero-logo-row {
+    margin-bottom: 32px;
+  }
+  .sw-title-line {
+    white-space: normal;
   }
   .sw-hero-gradient-overlay {
-    background: rgba(255, 255, 255, 0.92);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.93) 65%, rgba(255, 255, 255, 0.75) 100%);
   }
   .sw-section-pad {
     padding: 60px 0;

@@ -19,17 +19,33 @@ get_header();
 <main id="primary" class="site-main">
 
     <!-- =====================================================================
-         01. HERO (Slogan + 1 câu mô tả | Công trình 3D tổng thể 21:9)
+         01. HERO (Logo Doanh Nghiệp + Slogan + 1 Câu Mô Tả | Kiến Trúc 21:9 Sảnh Đỏ)
          ===================================================================== -->
     <section class="sw-hero-219" id="hero">
-        <!-- 3D Architectural Blueprint Background 21:9 -->
+        <!-- Architectural Building Background & Precision Gradient Overlay -->
         <div class="sw-hero-bg-wrapper">
-            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-3d-architecture.jpg' ); ?>" alt="SANWAY 3D Technical Architecture" class="sw-hero-bg-img">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-building-facade.jpg' ); ?>" alt="CÔNG TY CỔ PHẦN SANWAY - Hệ thống PCCC Chuẩn Mực Quốc Tế" class="sw-hero-bg-img">
             <div class="sw-hero-gradient-overlay"></div>
         </div>
 
-        <div class="sw-container">
-            <!-- 40% Left Column (Nền trắng sáng, Slogan + 1 câu mô tả + CTA) -->
+        <div class="sw-container sw-hero-container">
+            <!-- Brand Logo Đặt Trực Tiếp Vào Section 1 (Kích Thước Lớn, Sang Trọng) -->
+            <div class="sw-hero-logo-row">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-hero-logo-link" aria-label="SANWAY Homepage">
+                    <?php 
+                    $logo_url = function_exists( 'sanway_get_logo_url' ) ? sanway_get_logo_url( 'horizontal' ) : '';
+                    if ( $logo_url ) : ?>
+                        <img src="<?php echo esc_url( $logo_url ); ?>" alt="CÔNG TY CỔ PHẦN SANWAY" class="sw-hero-logo-img">
+                    <?php else : ?>
+                        <div class="sw-logo-text-wrapper">
+                            <span class="sw-brand-name">SANWAY</span>
+                            <span class="sw-brand-tagline">Phòng Cháy Chữa Cháy</span>
+                        </div>
+                    <?php endif; ?>
+                </a>
+            </div>
+
+            <!-- Left Content Column (Ngữ nghĩa tiếng Việt chuẩn chỉ, không ngắt dòng vô thức) -->
             <div class="sw-hero-left-col">
                 <div class="sw-pos-badge">
                     <span class="sw-pos-dot"></span>
@@ -37,8 +53,8 @@ get_header();
                 </div>
 
                 <h1 class="sw-hero-slogan-title">
-                    CHO MỖI BƯỚC TIẾN<br>
-                    <span class="sw-text-red">THÊM VỮNG VÀNG</span>
+                    <span class="sw-title-line">CHO MỖI BƯỚC TIẾN</span>
+                    <span class="sw-title-line sw-text-red">THÊM VỮNG VÀNG</span>
                 </h1>
 
                 <p class="sw-hero-subline">

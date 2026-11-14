@@ -18,10 +18,17 @@ get_header();
     <!-- =====================================================================
          1. HERO BANNER
          ===================================================================== -->
-    <section class="sw-pos-hero" style="min-height: 50vh; padding: 60px 0 70px 0;">
+    <section class="sw-pos-hero" style="min-height: 50vh; padding: 50px 0 70px 0;">
         <div class="sw-hero-ghost-light">CONTACT</div>
 
         <div class="sw-container">
+            <!-- Brand Logo (Điều hướng về Trang Chủ) -->
+            <div class="sw-hero-logo-row" style="margin-bottom: 44px;">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="sw-hero-logo-link" aria-label="SANWAY Homepage">
+                    <img src="<?php echo esc_url( sanway_get_logo_url( 'horizontal' ) ); ?>" alt="CÔNG TY CỔ PHẦN SANWAY" class="sw-hero-logo-img">
+                </a>
+            </div>
+
             <div class="sw-pos-hero-content">
                 <div class="sw-pos-badge">
                     <span class="sw-pos-dot"></span>
@@ -33,7 +40,7 @@ get_header();
                     <span class="sw-line sw-text-red">BÁO GIÁ KỸ THUẬT</span>
                 </h1>
 
-                <p class="sw-pos-desc" style="margin-bottom: 24px;">
+                <p class="sw-pos-desc" style="margin-bottom: 24px; text-wrap: pretty;">
                     Đội ngũ kỹ sư SANWAY sẵn sàng tiếp nhận thông tin, khảo sát hiện trường và tư vấn giải pháp tối ưu nhất cho quý doanh nghiệp.
                 </p>
             </div>
