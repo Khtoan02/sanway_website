@@ -1,16 +1,14 @@
 <?php
 /**
  * Front Page Template (Trang Chủ) - SANWAY
- * Chuẩn cấu trúc 9 phần:
- * 01 — Hero Banner & Thông điệp thương hiệu
- * 02 — Giới thiệu SANWAY
- * 03 — Ba lĩnh vực hoạt động
- * 04 — Dịch vụ PCCC trọng tâm
- * 05 — Năng lực triển khai
- * 06 — Quy trình làm việc
- * 07 — Cam kết của SANWAY
- * 08 — Đồng hành và hợp tác
- * 09 — Kết nối cùng SANWAY
+ * Chuẩn cấu trúc 7 phần & hình ảnh đồ họa chủ đạo:
+ * 01. Hero               — Slogan + 1 câu mô tả   | Công trình 3D tổng thể (21:9)
+ * 02. Lĩnh vực hoạt động — 3 tên lĩnh vực         | 3 khối hình ảnh lớn
+ * 03. Giải pháp PCCC     — 4 nhóm dịch vụ         | Mô hình hệ thống kỹ thuật 3D
+ * 04. Đối tác toàn diện  — 3 giá trị              | Mặt cắt công trình tích hợp
+ * 05. Quy trình          — 5 bước ngắn            | Đồ họa timeline liên tục
+ * 06. Đồng hành & Hợp tác— 6 loại hình công trình | Lưới ảnh kiến trúc
+ * 07. Kết nối            — Slogan + CTA           | Hình ảnh kiến trúc toàn cảnh
  *
  * @package SANWAY
  */
@@ -21,303 +19,360 @@ get_header();
 <main id="primary" class="site-main">
 
     <!-- =====================================================================
-         01 — Hero Banner & Thông điệp thương hiệu
+         01. HERO (Slogan + 1 câu mô tả | Công trình 3D tổng thể 21:9)
          ===================================================================== -->
-    <section class="sw-pos-hero" id="hero">
-        <div class="sw-hero-ghost-light">SANWAY JSC</div>
+    <section class="sw-hero-219" id="hero">
+        <!-- 3D Architectural Blueprint Background 21:9 -->
+        <div class="sw-hero-bg-wrapper">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-3d-architecture.jpg' ); ?>" alt="SANWAY 3D Technical Architecture" class="sw-hero-bg-img">
+            <div class="sw-hero-gradient-overlay"></div>
+        </div>
 
         <div class="sw-container">
-            <div class="sw-pos-hero-content">
+            <!-- 40% Left Column (Nền trắng sáng, Slogan + 1 câu mô tả + CTA) -->
+            <div class="sw-hero-left-col">
                 <div class="sw-pos-badge">
                     <span class="sw-pos-dot"></span>
-                    SANWAY JSC • AN TOÀN ĐỂ PHÁT TRIỂN THỊNH VƯỢNG
+                    SANWAY JSC • AN TOÀN DOANH NGHIỆP
                 </div>
 
-                <h1 class="sw-pos-hero-title">
-                    <span class="sw-line">KIẾN TẠO AN TÂM</span>
-                    <span class="sw-line sw-text-red">VỮNG BƯỚC TIẾN XA</span>
+                <h1 class="sw-hero-slogan-title">
+                    CHO MỖI BƯỚC TIẾN<br>
+                    <span class="sw-text-red">THÊM VỮNG VÀNG</span>
                 </h1>
 
-                <div class="sw-pos-slogan">
-                    "CHO MỖI BƯỚC TIẾN <span>THÊM VỮNG VÀNG</span>"
-                </div>
-
-                <p class="sw-pos-desc">
-                    Đồng hành cùng sự thịnh vượng và an toàn bền vững của doanh nghiệp bằng hệ thống giải pháp kỹ thuật phòng cháy chữa cháy tiêu chuẩn hàng đầu.
+                <p class="sw-hero-subline">
+                    Hệ thống phòng cháy chữa cháy chuẩn mực quốc tế, kiến tạo an tâm cho các đại công trình và nhà máy công nghiệp.
                 </p>
 
-                <div class="sw-pos-actions">
-                    <a href="<?php echo esc_url( function_exists( 'sanway_get_contact_url' ) ? sanway_get_contact_url() : home_url( '/lien-he/' ) ); ?>" class="sw-btn-pos-primary">
+                <div class="sw-hero-btn-row">
+                    <a href="tel:0936543389" class="sw-btn-pos-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
-                        <span>LIÊN HỆ & BÁO GIÁ: 0936 543 389</span>
-                    </a>
-                    <a href="#gioi-thieu" class="sw-btn-pos-secondary">
-                        <span>TÌM HIỂU SANWAY</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         02 — Giới thiệu SANWAY
-         ===================================================================== -->
-    <section class="sw-pos-section sw-bg-subtle" id="gioi-thieu">
-        <div class="sw-container">
-            <div class="sw-about-story-box">
-                <span class="sw-pos-section-tag">02 / VỀ CHÚNG TÔI</span>
-                <h2 class="sw-pos-section-title" style="margin-bottom: 24px;">CÔNG TY CỔ PHẦN SANWAY</h2>
-                <div class="sw-pos-slogan" style="font-size: 1.4rem; margin-bottom: 20px;">
-                    <em>"CHO MỖI BƯỚC TIẾN <span>THÊM VỮNG VÀNG</span>"</em>
-                </div>
-                <p style="font-size: 17.5px; line-height: 1.75; color: var(--sw-slate); max-width: 860px; margin: 0 auto 28px auto;">
-                    <strong>SANWAY JSC</strong> là doanh nghiệp chuyên sâu trong lĩnh vực tư vấn, thiết kế, cung cấp trang thiết bị và thi công bảo trì hệ thống Phòng Cháy Chữa Cháy (PCCC) cho các cơ sở sản xuất, nhà xưởng FDI và công trình trọng điểm tại Hải Phòng và khu vực miền Bắc. Chúng tôi tin rằng: <strong>An toàn là nền tảng cốt lõi của mọi sự phát triển hưng thịnh.</strong>
-                </p>
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <div class="sw-badge-pill">✓ Pháp nhân minh bạch</div>
-                    <div class="sw-badge-pill">✓ Tiêu chuẩn QCVN 06:2022/BXD</div>
-                    <div class="sw-badge-pill">✓ Kỹ sư chứng chỉ hành nghề</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         03 — Ba lĩnh vực hoạt động
-         ===================================================================== -->
-    <section class="sw-pos-section" id="linh-vuc">
-        <div class="sw-container">
-            <div class="sw-pos-section-head">
-                <span class="sw-pos-section-tag">03 / PHẠM VI NĂNG LỰC</span>
-                <h2 class="sw-pos-section-title">BA LĨNH VỰC HOẠT ĐỘNG CHÍNH</h2>
-            </div>
-
-            <div class="sw-triad-grid">
-                <!-- Field 1 -->
-                <div class="sw-triad-card">
-                    <div class="sw-triad-number">01</div>
-                    <h3 class="sw-triad-title">CUNG ỨNG VẬT TƯ & THIẾT BỊ</h3>
-                    <p class="sw-triad-desc">
-                        Cung cấp hơn 47+ danh mục trang thiết bị báo cháy, bình chữa cháy bột và khí CO2, van vòi lăng phun chính hãng, đầy đủ kiểm định CO/CQ.
-                    </p>
-                </div>
-
-                <!-- Field 2 -->
-                <div class="sw-triad-card">
-                    <div class="sw-triad-number">02</div>
-                    <h3 class="sw-triad-title">THI CÔNG & LẮP ĐẶT HỆ THỐNG</h3>
-                    <p class="sw-triad-desc">
-                        Tổng thầu thi công lắp đặt trọn gói hệ thống báo cháy tự động địa chỉ, mạng lưới chữa cháy Sprinkler và cụm trạm bơm công nghiệp công suất lớn.
-                    </p>
-                </div>
-
-                <!-- Field 3 -->
-                <div class="sw-triad-card">
-                    <div class="sw-triad-number">03</div>
-                    <h3 class="sw-triad-title">BẢO TRÌ & THẨM DUYỆT PHÁP LÝ</h3>
-                    <p class="sw-triad-desc">
-                        Hợp đồng bảo dưỡng định kỳ cho nhà máy FDI, nạp sạc bình PCCC thu nhận tận nơi, tư vấn thiết kế và hỗ trợ thủ tục nghiệm thu Cảnh sát PCCC.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         04 — Dịch vụ PCCC trọng tâm
-         ===================================================================== -->
-    <section class="sw-pos-pillars-section sw-bg-subtle" id="dich-vu">
-        <div class="sw-container">
-            <div class="sw-pos-section-head">
-                <span class="sw-pos-section-tag">04 / DỊCH VỤ TRỌNG TÂM</span>
-                <h2 class="sw-pos-section-title">HỆ SINH THÁI GIẢI PHÁP KỸ THUẬT</h2>
-            </div>
-
-            <div class="sw-pos-pillar-list">
-                <div class="sw-pos-pillar-row">
-                    <div class="sw-pos-pillar-idx">01</div>
-                    <div class="sw-pos-pillar-title">BÁO CHÁY TỰ ĐỘNG</div>
-                    <div class="sw-pos-pillar-desc">
-                        Tủ trung tâm địa chỉ thông minh, cảm biến quang điện, nhiệt gia tăng & laser BEAM độ nhạy cao.
-                    </div>
-                </div>
-
-                <div class="sw-pos-pillar-row">
-                    <div class="sw-pos-pillar-idx">02</div>
-                    <div class="sw-pos-pillar-title">CHỮA CHÁY SPRINKLER</div>
-                    <div class="sw-pos-pillar-desc">
-                        Mạng lưới đầu phun tự động phản ứng nhanh, cụm van tràn xả áp suất cao bảo vệ an toàn nhà xưởng.
-                    </div>
-                </div>
-
-                <div class="sw-pos-pillar-row">
-                    <div class="sw-pos-pillar-idx">03</div>
-                    <div class="sw-pos-pillar-title">TRẠM BƠM ĐẦU NÃO</div>
-                    <div class="sw-pos-pillar-desc">
-                        Động cơ điện & Diesel công suất lớn, tủ điều khiển tự động hóa PLC duy trì liên tục áp lực nguồn nước.
-                    </div>
-                </div>
-
-                <div class="sw-pos-pillar-row">
-                    <div class="sw-pos-pillar-idx">04</div>
-                    <div class="sw-pos-pillar-title">KIỂM ĐỊNH & NẠP SẠC BÌNH</div>
-                    <div class="sw-pos-pillar-desc">
-                        Quy trình kiểm tra định kỳ, nạp sạc khí CO2 và bình bột ABC đạt chuẩn kiểm định, giao nhận tận nơi.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         05 — Năng lực triển khai
-         ===================================================================== -->
-    <section class="sw-pos-numbers-section" id="nang-luc">
-        <div class="sw-container">
-            <div class="sw-pos-section-head" style="margin-bottom: 48px;">
-                <span class="sw-pos-section-tag">05 / NĂNG LỰC THỰC CHIẾN</span>
-                <h2 class="sw-pos-section-title">CHỨNG MINH BẰNG NĂNG LỰC</h2>
-            </div>
-
-            <div class="sw-pos-numbers-grid">
-                <div class="sw-pos-num-item">
-                    <div class="sw-pos-num-val">47<span>+</span></div>
-                    <div class="sw-pos-num-title">Chủng Loại Thiết Bị Sẵn Kho</div>
-                    <div class="sw-pos-num-sub">Cung ứng nhanh chóng, đồng bộ mọi quy mô công trình</div>
-                </div>
-
-                <div class="sw-pos-num-item">
-                    <div class="sw-pos-num-val">100<span>%</span></div>
-                    <div class="sw-pos-num-title">Đạt Chuẩn Kiểm Định Quốc Gia</div>
-                    <div class="sw-pos-num-sub">Hồ sơ pháp lý CO/CQ đầy đủ và minh bạch</div>
-                </div>
-
-                <div class="sw-pos-num-item">
-                    <div class="sw-pos-num-val">24<span>/7</span></div>
-                    <div class="sw-pos-num-title">Đồng Hành Kỹ Thuật Toàn Thời Gian</div>
-                    <div class="sw-pos-num-sub">Đội ngũ kỹ sư túc trực bảo trì và xử lý nhanh tại KCN</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         06 — Quy trình làm việc
-         ===================================================================== -->
-    <section class="sw-pos-section" id="quy-trinh">
-        <div class="sw-container">
-            <div class="sw-pos-section-head">
-                <span class="sw-pos-section-tag">06 / PHƯƠNG PHÁP TRIỂN KHAI</span>
-                <h2 class="sw-pos-section-title">4 BƯỚC TIÊU CHUẨN MINH BẠCH</h2>
-            </div>
-
-            <div class="sw-workflow-grid">
-                <div class="sw-workflow-step">
-                    <div class="sw-step-badge">GIAI ĐOẠN 01</div>
-                    <h3 class="sw-step-heading">Khảo Sát Hiện Trường</h3>
-                    <p class="sw-step-text">Đo đạc thực tế, tiếp nhận yêu cầu và đánh giá công năng công trình.</p>
-                </div>
-
-                <div class="sw-workflow-step">
-                    <div class="sw-step-badge">GIAI ĐOẠN 02</div>
-                    <h3 class="sw-step-heading">Thiết Kế & Dự Toán</h3>
-                    <p class="sw-step-text">Lập bản vẽ kỹ thuật tối ưu chi phí và bóc tách bảng báo giá minh bạch.</p>
-                </div>
-
-                <div class="sw-workflow-step">
-                    <div class="sw-step-badge">GIAI ĐOẠN 03</div>
-                    <h3 class="sw-step-heading">Thi Công & Hiệu Chỉnh</h3>
-                    <p class="sw-step-text">Lắp đặt thiết bị chính hãng và chạy thử nghiệm liên động toàn hệ thống.</p>
-                </div>
-
-                <div class="sw-workflow-step">
-                    <div class="sw-step-badge">GIAI ĐOẠN 04</div>
-                    <h3 class="sw-step-heading">Nghiệm Thu & Bảo Hành</h3>
-                    <p class="sw-step-text">Nghiệm thu với cơ quan Cảnh sát PCCC và kích hoạt bảo hành bảo trì.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         07 — Cam kết của SANWAY
-         ===================================================================== -->
-    <section class="sw-pos-section sw-bg-subtle" id="cam-ket">
-        <div class="sw-container">
-            <div class="sw-pos-section-head">
-                <span class="sw-pos-section-tag">07 / NGUYÊN TẮC VÀNG</span>
-                <h2 class="sw-pos-section-title">CAM KẾT CỦA SANWAY</h2>
-            </div>
-
-            <div class="sw-commit-grid">
-                <div class="sw-commit-card">
-                    <div class="sw-commit-icon">✓</div>
-                    <h4 class="sw-commit-title">100% Chuẩn Kiểm Định</h4>
-                    <p class="sw-commit-text">Mọi thiết bị đều đạt kiểm định chất lượng của Cảnh sát PCCC và có CO/CQ rõ ràng.</p>
-                </div>
-
-                <div class="sw-commit-card">
-                    <div class="sw-commit-icon">✓</div>
-                    <h4 class="sw-commit-title">Đúng Tiến Độ & Dự Toán</h4>
-                    <p class="sw-commit-text">Cam kết bàn giao công trình đúng hẹn, không phát sinh chi phí ngoài hợp đồng.</p>
-                </div>
-
-                <div class="sw-commit-card">
-                    <div class="sw-commit-icon">✓</div>
-                    <h4 class="sw-commit-title">Bảo Hành 12 - 24 Tháng</h4>
-                    <p class="sw-commit-text">Chính sách bảo hành dài hạn cùng dịch vụ bảo trì định kỳ chu đáo trọn vòng đời.</p>
-                </div>
-
-                <div class="sw-commit-card">
-                    <div class="sw-commit-icon">✓</div>
-                    <h4 class="sw-commit-title">Trực Kỹ Thuật 24/7</h4>
-                    <p class="sw-commit-text">Đội ngũ kỹ thuật viên sẵn sàng ứng cứu và hỗ trợ sự cố khẩn cấp tại các KCN.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         08 — Đồng hành và hợp tác
-         ===================================================================== -->
-    <section class="sw-pos-manifesto-section" id="dong-hanh">
-        <div class="sw-container">
-            <span class="sw-pos-section-tag" style="color: #F87171; margin-bottom: 16px;">08 / ĐỒNG HÀNH CHIẾN LƯỢC</span>
-            <blockquote class="sw-pos-manifesto-quote" style="margin-bottom: 24px;">
-                "AN TOÀN LÀ NỀN TẢNG • THỊNH VƯỢNG LÀ <span>ĐÍCH ĐẾN</span>"
-            </blockquote>
-            <p style="font-size: 18px; color: #CBD5E1; max-width: 760px; margin: 0 auto; line-height: 1.65;">
-                SANWAY tự hào là đối tác đồng hành tin cậy của các chủ đầu tư, tổng thầu xây dựng và ban quản lý tại các KCN trọng điểm: Nomura, Đình Vũ, Tràng Duệ, VSIP, Nam Cầu Kiền...
-            </p>
-        </div>
-    </section>
-
-    <!-- =====================================================================
-         09 — Kết nối cùng SANWAY
-         ===================================================================== -->
-    <section class="sw-pos-cta-section" id="ket-noi">
-        <div class="sw-container">
-            <div class="sw-pos-cta-box">
-                <span class="sw-pos-section-tag">09 / KẾT NỐI HỢP TÁC</span>
-                <h3 class="sw-pos-cta-title">SẴN SÀNG KIẾN TẠO SỰ AN TÂM CÙNG BẠN</h3>
-                <p style="font-size: 17px; color: var(--sw-slate); max-width: 620px; margin: 0 auto;">
-                    Kết nối trực tiếp cùng Giám Đốc SANWAY JSC để nhận tư vấn kỹ thuật và báo giá chi tiết cho công trình.
-                </p>
-
-                <div>
-                    <a href="tel:0936543389" class="sw-pos-cta-phone">
-                        0936 543 389
-                    </a>
-                </div>
-
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:0936543389" class="sw-btn-pos-primary">
-                        GỌI 0936 543 389
+                        <span>KHẢO SÁT: 0936 543 389</span>
                     </a>
                     <a href="<?php echo esc_url( function_exists( 'sanway_get_contact_url' ) ? sanway_get_contact_url() : home_url( '/lien-he/' ) ); ?>" class="sw-btn-pos-secondary">
-                        GỬI YÊU CẦU BÁO GIÁ
+                        <span>GỬI YÊU CẦU BÁO GIÁ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         02. LĨNH VỰC HOẠT ĐỘNG (3 tên lĩnh vực | 3 khối hình ảnh lớn)
+         ===================================================================== -->
+    <section class="sw-section-pad" id="linh-vuc">
+        <div class="sw-container">
+            <div class="sw-section-header-clean">
+                <span class="sw-tag-red">02 / LĨNH VỰC HOẠT ĐỘNG</span>
+                <h2 class="sw-title-monumental">BA TRỤ CỘT CHUYÊN MÔN</h2>
+            </div>
+
+            <!-- 3 Khối Hình Ảnh Lớn (3 Large Visual Blocks) -->
+            <div class="sw-three-image-grid">
+                <!-- Khối 1: Vật tư & Thiết bị -->
+                <div class="sw-image-card">
+                    <div class="sw-image-box">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pccc-engineer-pipes.jpg' ); ?>" alt="Thiết Bị PCCC Chuẩn Kiểm Định" class="sw-card-img">
+                        <div class="sw-image-overlay"></div>
+                    </div>
+                    <div class="sw-image-content">
+                        <span class="sw-card-num">01</span>
+                        <h3 class="sw-card-title">THIẾT BỊ & VẬT TƯ PCCC CHUẨN KIỂM ĐỊNH</h3>
+                        <p class="sw-card-desc">Cung cấp hơn 47+ chủng loại trang thiết bị đạt chuẩn kiểm định Cảnh sát PCCC và CO/CQ minh bạch.</p>
+                    </div>
+                </div>
+
+                <!-- Khối 2: Thi công & Lắp đặt -->
+                <div class="sw-image-card">
+                    <div class="sw-image-box">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pccc-pump-station.jpg' ); ?>" alt="Thi Công Lắp Đặt Hệ Thống PCCC" class="sw-card-img">
+                        <div class="sw-image-overlay"></div>
+                    </div>
+                    <div class="sw-image-content">
+                        <span class="sw-card-num">02</span>
+                        <h3 class="sw-card-title">THI CÔNG & LẮP ĐẶT HỆ THỐNG TOÀN DIỆN</h3>
+                        <p class="sw-card-desc">Thi công mạng lưới báo cháy tự động, hệ thống Sprinkler và cụm trạm bơm công nghiệp công suất lớn.</p>
+                    </div>
+                </div>
+
+                <!-- Khối 3: Bảo trì & Thẩm duyệt -->
+                <div class="sw-image-card">
+                    <div class="sw-image-box">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/factory-facility.jpg' ); ?>" alt="Bảo Trì KCN & Thẩm Duyệt Pháp Lý" class="sw-card-img">
+                        <div class="sw-image-overlay"></div>
+                    </div>
+                    <div class="sw-image-content">
+                        <span class="sw-card-num">03</span>
+                        <h3 class="sw-card-title">BẢO TRÌ NHÀ MÁY & THẨM DUYỆT PHÁP LÝ</h3>
+                        <p class="sw-card-desc">Hợp đồng bảo dưỡng định kỳ tại các KCN, nạp sạc bình PCCC tận nơi và hoàn thiện hồ sơ nghiệm thu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         03. GIẢI PHÁP PCCC (4 nhóm dịch vụ | Mô hình hệ thống kỹ thuật 3D)
+         ===================================================================== -->
+    <section class="sw-section-pad sw-bg-subtle" id="giai-phap">
+        <div class="sw-container">
+            <div class="sw-section-header-clean">
+                <span class="sw-tag-red">03 / GIẢI PHÁP PCCC</span>
+                <h2 class="sw-title-monumental">HỆ THỐNG KỸ THUẬT TIÊU CHUẨN</h2>
+            </div>
+
+            <div class="sw-solutions-composite-grid">
+                <!-- 4 Nhóm dịch vụ bên trái -->
+                <div class="sw-solutions-list">
+                    <div class="sw-solution-item">
+                        <div class="sw-sol-num">01</div>
+                        <div>
+                            <h3 class="sw-sol-name">HỆ THỐNG BÁO CHÁY TỰ ĐỘNG</h3>
+                            <p class="sw-sol-text">Tủ trung tâm địa chỉ thông minh, cảm biến quang điện, nhiệt gia tăng & laser BEAM độ nhạy cao.</p>
+                        </div>
+                    </div>
+
+                    <div class="sw-solution-item">
+                        <div class="sw-sol-num">02</div>
+                        <div>
+                            <h3 class="sw-sol-name">HỆ THỐNG CHỮA CHÁY SPRINKLER</h3>
+                            <p class="sw-sol-text">Mạng lưới đầu phun tự động phản ứng nhanh, cụm van tràn xả áp lực cao bảo vệ an toàn nhà xưởng.</p>
+                        </div>
+                    </div>
+
+                    <div class="sw-solution-item">
+                        <div class="sw-sol-num">03</div>
+                        <div>
+                            <h3 class="sw-sol-name">TRẠM BƠM CÔNG SUẤT CAO</h3>
+                            <p class="sw-sol-text">Động cơ điện & Diesel công suất lớn, tủ điều khiển tự động hóa PLC duy trì liên tục áp lực nước.</p>
+                        </div>
+                    </div>
+
+                    <div class="sw-solution-item">
+                        <div class="sw-sol-num">04</div>
+                        <div>
+                            <h3 class="sw-sol-name">KIỂM ĐỊNH & NẠP SẠC BÌNH PCCC</h3>
+                            <p class="sw-sol-text">Kiểm tra áp lực định kỳ, nạp sạc khí CO2 (MT3) và bình bột ABC (MFZL4, MFZ35) đạt chuẩn kiểm định.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mô hình kỹ thuật 3D bên phải -->
+                <div class="sw-tech-3d-model-card">
+                    <div class="sw-model-box">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-3d-architecture.jpg' ); ?>" alt="Mô hình hệ thống kỹ thuật 3D" class="sw-model-img">
+                        <div class="sw-model-badge">MÔ HÌNH HỆ THỐNG KỸ THUẬT 3D</div>
+                    </div>
+                    <div class="sw-model-caption">
+                        <strong>Tổ Hợp Kết Cấu & Mạng Lưới Kỹ Thuật PCCC</strong>
+                        <span>Mặt cắt trực quan hệ thống đường ống dẫn, đầu phun Sprinkler và trạm bơm liên động.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         04. ĐỐI TÁC TOÀN DIỆN (3 giá trị | Mặt cắt công trình tích hợp)
+         ===================================================================== -->
+    <section class="sw-section-pad" id="doi-tac">
+        <div class="sw-container">
+            <div class="sw-section-header-clean">
+                <span class="sw-tag-red">04 / ĐỐI TÁC TOÀN DIỆN</span>
+                <h2 class="sw-title-monumental">BA GIÁ TRỊ CỐT LÕI</h2>
+            </div>
+
+            <div class="sw-partner-composite-grid">
+                <!-- Mặt cắt công trình tích hợp bên trái -->
+                <div class="sw-cross-section-box">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/modern-office.jpg' ); ?>" alt="Mặt cắt công trình tích hợp" class="sw-cross-img">
+                    <div class="sw-cross-tag">TỔ HỢP CÔNG TRÌNH VĂN PHÒNG & NHÀ XƯỞNG</div>
+                </div>
+
+                <!-- 3 Giá trị cốt lõi bên phải -->
+                <div class="sw-values-stack">
+                    <div class="sw-val-item">
+                        <div class="sw-val-idx">01</div>
+                        <div>
+                            <h3 class="sw-val-title">AN TOÀN TUYỆT ĐỐI</h3>
+                            <p class="sw-val-desc">Đặt tính mạng con người và giá trị tài sản doanh nghiệp làm trọng tâm tối thượng trong từng chi tiết kỹ thuật.</p>
+                        </div>
+                    </div>
+
+                    <div class="sw-val-item">
+                        <div class="sw-val-idx">02</div>
+                        <div>
+                            <h3 class="sw-val-title">CHUẨN MỰC PHÁP LÝ</h3>
+                            <p class="sw-val-desc">100% tuân thủ quy chuẩn kỹ thuật QCVN 06:2022/BXD và thủ tục thẩm duyệt nghiệm thu của cơ quan Cảnh sát PCCC.</p>
+                        </div>
+                    </div>
+
+                    <div class="sw-val-item">
+                        <div class="sw-val-idx">03</div>
+                        <div>
+                            <h3 class="sw-val-title">ĐỒNG HÀNH BỀN VỮNG</h3>
+                            <p class="sw-val-desc">Chính sách bảo hành 12 - 24 tháng, bảo dưỡng định kỳ và túc trực kỹ thuật khẩn cấp 24/7 trọn vòng đời sử dụng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         05. QUY TRÌNH (5 bước ngắn | Đồ họa timeline liên tục)
+         ===================================================================== -->
+    <section class="sw-section-pad sw-bg-subtle" id="quy-trinh">
+        <div class="sw-container">
+            <div class="sw-section-header-clean">
+                <span class="sw-tag-red">05 / PHƯƠNG THỨC LÀM VIỆC</span>
+                <h2 class="sw-title-monumental">QUY TRÌNH 5 BƯỚC TIÊU CHUẨN</h2>
+            </div>
+
+            <!-- Đồ họa Timeline Liên tục (Continuous Timeline Graphics) -->
+            <div class="sw-timeline-container">
+                <div class="sw-timeline-line"></div>
+                <div class="sw-timeline-steps">
+                    <!-- Step 1 -->
+                    <div class="sw-tstep">
+                        <div class="sw-tstep-node">01</div>
+                        <h4 class="sw-tstep-name">KHẢO SÁT</h4>
+                        <p class="sw-tstep-text">Đo đạc hiện trường & đánh giá hiện trạng thực tế công trình.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="sw-tstep">
+                        <div class="sw-tstep-node">02</div>
+                        <h4 class="sw-tstep-name">THIẾT KẾ</h4>
+                        <p class="sw-tstep-text">Lập bản vẽ giải pháp kỹ thuật & bóc tách dự toán minh bạch.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="sw-tstep">
+                        <div class="sw-tstep-node">03</div>
+                        <h4 class="sw-tstep-name">THẨM DUYỆT</h4>
+                        <p class="sw-tstep-text">Hoàn thiện hồ sơ thẩm duyệt chuẩn pháp lý với cơ quan PCCC.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="sw-tstep">
+                        <div class="sw-tstep-node">04</div>
+                        <h4 class="sw-tstep-name">THI CÔNG</h4>
+                        <p class="sw-tstep-text">Lắp đặt thiết bị chính hãng và chạy thử nghiệm liên động.</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="sw-tstep">
+                        <div class="sw-tstep-node">05</div>
+                        <h4 class="sw-tstep-name">BÀN GIAO</h4>
+                        <p class="sw-tstep-text">Nghiệm thu Cảnh sát PCCC & kích hoạt bảo hành bảo trì.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         06. ĐỒNG HÀNH & HỢP TÁC (6 loại hình công trình | Lưới ảnh kiến trúc)
+         ===================================================================== -->
+    <section class="sw-section-pad" id="hop-tac">
+        <div class="sw-container">
+            <div class="sw-section-header-clean">
+                <span class="sw-tag-red">06 / ĐỒNG HÀNH & HỢP TÁC</span>
+                <h2 class="sw-title-monumental">6 LOẠI HÌNH CÔNG TRÌNH TIÊU BIỂU</h2>
+                <p style="font-size: 16px; color: var(--sw-muted); margin-top: 8px;">
+                    SANWAY tự hào phục vụ đa dạng các quy mô công trình công nghiệp và dân dụng tại Hải Phòng và miền Bắc.
+                </p>
+            </div>
+
+            <!-- Lưới Ảnh Kiến Trúc (6 Architectural Grid Items) -->
+            <div class="sw-arch-grid">
+                <div class="sw-arch-item">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/factory-facility.jpg' ); ?>" alt="Nhà xưởng & Nhà máy FDI" class="sw-arch-img">
+                    <div class="sw-arch-mask">
+                        <span class="sw-arch-no">01</span>
+                        <h4 class="sw-arch-label">Nhà Xưởng & Nhà Máy FDI</h4>
+                    </div>
+                </div>
+
+                <div class="sw-arch-item">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/architecture-facade.jpg' ); ?>" alt="Tổ hợp công nghiệp & Khu chế xuất" class="sw-arch-img">
+                    <div class="sw-arch-mask">
+                        <span class="sw-arch-no">02</span>
+                        <h4 class="sw-arch-label">Tổ Hợp Công Nghiệp & KCN</h4>
+                    </div>
+                </div>
+
+                <div class="sw-arch-item">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/modern-office.jpg' ); ?>" alt="Tòa nhà văn phòng & Trụ sở" class="sw-arch-img">
+                    <div class="sw-arch-mask">
+                        <span class="sw-arch-no">03</span>
+                        <h4 class="sw-arch-label">Tòa Nhà Văn Phòng & Trụ Sở</h4>
+                    </div>
+                </div>
+
+                <div class="sw-arch-item">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pccc-pump-station.jpg' ); ?>" alt="Trạm bơm đầu não & Phòng máy kỹ thuật" class="sw-arch-img">
+                    <div class="sw-arch-mask">
+                        <span class="sw-arch-no">04</span>
+                        <h4 class="sw-arch-label">Phòng Máy Kỹ Thuật & Trạm Bơm</h4>
+                    </div>
+                </div>
+
+                <div class="sw-arch-item">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/pccc-engineer-pipes.jpg' ); ?>" alt="Kho vận Logistics & Kho ngoại quan" class="sw-arch-img">
+                    <div class="sw-arch-mask">
+                        <span class="sw-arch-no">05</span>
+                        <h4 class="sw-arch-label">Kho Vận Logistics & Cảng Biển</h4>
+                    </div>
+                </div>
+
+                <div class="sw-arch-item">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-3d-architecture.jpg' ); ?>" alt="Tổ hợp thương mại & Công trình cao tầng" class="sw-arch-img">
+                    <div class="sw-arch-mask">
+                        <span class="sw-arch-no">06</span>
+                        <h4 class="sw-arch-label">Tổ Hợp Thương Mại & Cao Tầng</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         07. KẾT NỐI (Slogan + CTA | Hình ảnh kiến trúc toàn cảnh)
+         ===================================================================== -->
+    <section class="sw-connect-panoramic-section" id="ket-noi">
+        <!-- Hình ảnh kiến trúc toàn cảnh làm nền -->
+        <div class="sw-panoramic-bg-box">
+            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/architecture-facade.jpg' ); ?>" alt="SANWAY Panoramic Architecture" class="sw-panoramic-img">
+            <div class="sw-panoramic-overlay"></div>
+        </div>
+
+        <div class="sw-container">
+            <div class="sw-panoramic-content">
+                <span class="sw-tag-white">07 / KẾT NỐI HỢP TÁC</span>
+                <div class="sw-panoramic-slogan">
+                    "CHO MỖI BƯỚC TIẾN <span>THÊM VỮNG VÀNG</span>"
+                </div>
+                <h2 class="sw-panoramic-heading">
+                    SẴN SÀNG ĐỒNG HÀNH BẢO VỆ DOANH NGHIỆP BẠN
+                </h2>
+                <p class="sw-panoramic-sub">
+                    Kết nối trực tiếp cùng Giám Đốc SANWAY JSC để nhận phương án kỹ thuật và bảng báo giá chi tiết trong vòng 24 giờ.
+                </p>
+
+                <div class="sw-panoramic-actions">
+                    <a href="tel:0936543389" class="sw-btn-pos-primary" style="padding: 18px 40px; font-size: 16px;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>HOTLINE: 0936 543 389</span>
+                    </a>
+                    <a href="<?php echo esc_url( function_exists( 'sanway_get_contact_url' ) ? sanway_get_contact_url() : home_url( '/lien-he/' ) ); ?>" class="sw-btn-pos-secondary" style="padding: 18px 36px; font-size: 16px;">
+                        <span>GỬI FORM LIÊN HỆ & BÁO GIÁ</span>
                     </a>
                 </div>
             </div>
